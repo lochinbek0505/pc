@@ -1,5 +1,6 @@
 package uz.falconmobile.pc.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,11 +17,11 @@ import uz.falconmobile.pc.models.pc_model
 
 class ModelActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityModelBinding
+    private lateinit var binding: ActivityModelBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityModelBinding.inflate(layoutInflater)
+        binding = ActivityModelBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -29,19 +30,21 @@ class ModelActivity : AppCompatActivity() {
 
         var data = intent.getSerializableExtra("data3") as brand_model
 
-        var adapter = ModelPartsAdapter(data.model_list, object : ModelPartsAdapter.ItemSelectListener {
-            override fun onClick(date: pc_model) {
+        var adapter =
+            ModelPartsAdapter(data.model_list, object : ModelPartsAdapter.ItemSelectListener {
+                override fun onClick(date: pc_model) {
+
+                    var intent = Intent(this@ModelActivity, ShowActivity::class.java)
+                    intent.putExtra("data5", date)
+                    startActivity(intent)
 
 
+                }
 
-            }
 
-
-        })
+            })
 
         binding.recycler.adapter = adapter
-
-
 
 
     }

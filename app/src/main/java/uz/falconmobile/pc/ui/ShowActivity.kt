@@ -17,7 +17,7 @@ class ShowActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         var data = intent.getSerializableExtra(
-            "data3"
+            "data5"
         ) as pc_model
         binding.tvTitle.text = data.title
         binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
@@ -25,11 +25,16 @@ class ShowActivity : AppCompatActivity() {
                 super.onReady(youTubePlayer)
 
                 // Load a video by its YouTube video ID
-                val videoId = "dQw4w9WgXcQ" // Replace with your desired video ID
+                val videoId = data.video // Replace with your desired video ID
                 youTubePlayer.loadVideo(videoId, 0f)
             }
         })
         binding.asTv.text=data.text
         binding.asIv.setImageResource(data.image)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
     }
 }
