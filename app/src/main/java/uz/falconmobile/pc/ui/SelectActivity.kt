@@ -2,15 +2,14 @@ package uz.falconmobile.pc.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import uz.falconmobile.pc.R
-import uz.falconmobile.pc.adapters.BrandPartsAdapter
 import uz.falconmobile.pc.adapters.PcPartsAdapter
 import uz.falconmobile.pc.databinding.ActivitySelectBinding
 import uz.falconmobile.pc.models.brand_model
 import uz.falconmobile.pc.models.main_model
 import uz.falconmobile.pc.models.pc_model
-import uz.falconmobile.pc.models.tansfer_model
 
 class SelectActivity : AppCompatActivity() {
 
@@ -33,6 +32,64 @@ class SelectActivity : AppCompatActivity() {
             "CPU (Protsessor)", arrayListOf(
                 brand_model(
                     "Intel", arrayListOf(
+                        pc_model(
+                            "Intel Celeron ",
+                            """Intel Celeron — bu Intel kompaniyasining arzon narxdagi, o'rta darajadagi va past darajadagi protsessorlar oilasidir. Celeron protsessorlari asosan kundalik ishlarda, ta'lim, ofis dasturlari, internetda serfing qilish, o'yinlar va boshqa yengil vazifalar uchun ishlatiladi. Quyidagi ma'lumotlar Celeron protsessorlarining ba'zi asosiy jihatlarini ko'rsatadi:
+
+Asosiy Xususiyatlari:
+Arzonlik: Celeron protsessorlari o'zining arzon narxi bilan mashhur. Bu protsessorlar past darajadagi ishlov berish quvvatiga ega, shuning uchun ular ko'proq byudjetli kompyuter tizimlari uchun tavsiya etiladi.
+
+Past ishlash tezligi: Celeron protsessorlari ko'pincha i3, i5, i7 yoki i9 kabi Intelning yuqori darajadagi protsessorlariga nisbatan pastroq ishlash tezligiga ega bo'ladi. Biroq, ular kundalik ishlarda yaxshi samarali ishlaydi.
+
+Yadro soni: Ko'plab Celeron protsessorlarida ikki yoki to'rtta yadro mavjud. Bu asosan oddiy ko'p vazifali ishlarda yetarli bo'ladi, ammo og'ir dasturlar yoki o'yinlar uchun yetarli bo'lmasligi mumkin.
+
+Cache: Celeron protsessorlarida kichik miqdordagi cache xotira mavjud. Cache xotira tezkor ma'lumotlar uchun ishlatiladi, ammo Celeron protsessorlarida bu miqdor past bo'lishi mumkin.
+
+Energiya samaradorligi: Celeron protsessorlari kam energiya sarfi bilan ishlab chiqariladi, bu esa ularni mobil qurilmalarda, masalan, noutbuklarda samarali qiladi.
+
+Ishlash imkoniyatlari: Bu protsessorlar oddiy vazifalar uchun yaxshi bo'lsa-da, ilg'or grafiklar, video montaj, 3D ishlov berish yoki yuqori darajadagi o'yinlar uchun mos emas.
+
+Celeron Protsessorlarining Foydalanish So'halari:
+Byudjetli kompyuterlar: Celeron protsessorlari past narxdagi kompyuterlar uchun ishlatiladi, masalan, ofis ishlarida ishlatiladigan yoki internetga kirish uchun mo'ljallangan kompyuterlar.
+Noutbuklar: Celeron protsessorlari noutbuklar, ayniqsa, o'quvchilar va oddiy foydalanuvchilar uchun yaxshi variant.
+Kichik qurilmalar: Ba'zi Celeron protsessorlari kichik va yengil qurilmalarda ham ishlatiladi.
+Celeron Protsessorlarining Kamchiliklari:
+Ishlash tezligi: Og'ir dasturlar yoki o'yinlar uchun unchalik yaxshi emas.
+Tez eskirishi: Texnologiya tez rivojlanib borayotganligi sababli, Celeron protsessorlari ko'proq eski va zamonaviy dasturlar uchun unchalik samarali bo'lmasligi mumkin.
+Xulosa:
+Intel Celeron protsessorlari oddiy va byudjetli ishlash uchun yaxshi tanlov bo'lsa-da, yuqori samaradorlikni talab qiladigan vazifalar uchun muqobil protsessorlar (masalan, Intel i3, i5, i7) tavsiya etiladi. Ular asosan kundalik vazifalar uchun, ofis ishlarida yoki internetda ishlashda yaxshi ishlaydi.""",
+                            R.drawable.intel_celeron,
+                            "BVUX1OP8JUE"
+                        ),
+                        pc_model(
+                            "Intel Pentium Gold ",
+                            """Intel Pentium Gold — Intel kompaniyasining yana bir byudjetga mo'ljallangan protsessorlar oilasidir. Pentium Gold protsessorlari Celeron protsessorlariga nisbatan yuqoriroq ishlash va samaradorlikka ega bo'lib, ko'proq ofis dasturlari, internet serfing qilish va yengil ko'p vazifali ishlar uchun tavsiya etiladi. Pentium Gold protsessorlari quyidagi xususiyatlarga ega:
+
+Asosiy Xususiyatlari:
+Yuqori Ishlash Tezligi: Pentium Gold protsessorlari, odatda, Celeron protsessorlariga qaraganda yuqoriroq takt tezligiga ega bo'ladi, bu esa ularni tezroq va samarali qiladi. Shuningdek, ular ko'proq yadro va yuqori xotira hajmiga ega bo'lishi mumkin.
+
+Yadro va Ishlash Quvvati: Pentium Gold protsessorlarining ko'plab versiyalarida ikki yadro mavjud, ammo ba'zi versiyalarda to'rt yadroli modellar ham mavjud. Bu ko'proq ko'p vazifali ishlashni qo'llab-quvvatlaydi, masalan, ofis dasturlari, video tomosha qilish va yengil multitasking uchun.
+
+Cache Xotira: Pentium Gold protsessorlarida, odatda, 4 MB yoki undan ko'proq L3 cache xotira mavjud. Bu tezkor ma'lumotlarga tez kirish imkoniyatini beradi va ishlash samaradorligini oshiradi.
+
+Hyper-Threading Texnologiyasi: Ba'zi Pentium Gold protsessorlarida Hyper-Threading texnologiyasi mavjud bo'lib, bu har bir yadroda ikki qo'shimcha virtual to'g'ri ishlov berish oqimi yaratadi. Bu, ayniqsa, multitaskingda samarali ishlashga yordam beradi.
+
+Energiya Samaradorligi: Pentium Gold protsessorlari Celeron protsessorlariga nisbatan past energiya sarfini ta'minlaydi, bu esa ularni noutbuklar va boshqa mobil qurilmalar uchun yaxshi variant qiladi.
+
+Grafika: Pentium Gold protsessorlari Intel UHD Graphics bilan jihozlangan bo'lib, bu grafik ishlashni ta'minlaydi. Bu, eng yaxshi o'yinlarni o'ynash uchun mos bo'lmasa-da, oddiy grafika ishlarida yaxshi ishlaydi, masalan, video tomosha qilish yoki yengil grafika ishlov berish.
+
+Pentium Gold Protsessorlarining Foydalanish So'halari:
+Byudjetli Noutbuklar: Pentium Gold protsessorlari noutbuklar uchun yaxshi variant bo'lib, ular kundalik ishlarda, masalan, internetda serfing qilish, ofis dasturlari va video tomosha qilishda yaxshi ishlaydi.
+Ish Stansiyalari: Pentium Gold protsessorlari oddiy ish stansiyalari uchun, masalan, kirish darajasidagi ofis tizimlari yoki yengil ishlar uchun yaxshi tanlovdir.
+Kundalik Kompyuter Ishlari: Internetda serfing, video tomosha qilish, fayllarni tahrirlash va boshqa oddiy vazifalar uchun ideal.
+Pentium Gold Protsessorlarining Kamchiliklari:
+Og'ir O'yinlar va Dasturlar uchun Yetarli Emas: Pentium Gold protsessorlari yuqori darajadagi o'yinlar, video montaj yoki ilmiy hisoblash kabi murakkab vazifalar uchun yetarli emas.
+Yuqori Darajadagi Multitasking uchun Kamchiliklar: Ko'p vazifali ishlarda yuqori samaradorlikka erishish uchun yuqori darajadagi protsessorlar (masalan, Intel Core i5 yoki i7) yaxshiroq variant bo'lishi mumkin.
+Xulosa:
+Intel Pentium Gold protsessorlari byudjetga mo'ljallangan kompyuterlar uchun yaxshi tanlovdir. Ular Celeron protsessorlariga qaraganda yuqoriroq ishlash tezligi, ko'proq yadro va yaxshi samaradorlikni ta'minlaydi, ammo ular hali ham og'ir dasturlar va o'yinlar uchun mos emas. Oddiy kompyuter ishlarida, ofis dasturlarida va internetda serfing qilishda samarali ishlaydi.""",
+                            R.drawable.intel_pentium,
+                            "lqXl9Of8WvY&t=81s"
+                        ),
                         pc_model(
                             "Intel Core i3", """
 Intel i3 – Intel kompaniyasining Core seriyasidagi boshlang‘ich darajadagi protsessorlar qatoriga kiradi. Ushbu protsessorlar asosan kundalik ishlarga mo‘ljallangan va o‘rta darajadagi unumdorlikni ta’minlaydi. Keling, u haqida asosiy ma’lumotlarni ko‘rib chiqamiz:
@@ -135,8 +192,52 @@ Intel Core i7 protsessorlari yuqori unumdorlik va ko'p vazifalarni bajarishga mo
 
 Intel Core i7 protsessorlari oilasiga tegishli modellar qatorida portativ noutbuklar uchun yaratilgan Core i7-1165G7 va ish stoli uchun mo'ljallangan yuqori unumdor Core i7-13700K modellarini keltirish mumkin. Ular o'zining energiya samaradorligi va yuqori tezlikli ko'p yadroli ishlashi bilan ajralib turadi.                    """,
                             R.drawable.intel_i7, "LlPwrI8m05M"
+                        ),
+                        pc_model(
+                            "Intel Core i9",
+                            """
+Intel Core i9 — bu Intel kompaniyasining yuqori darajadagi protsessorlar oilasi bo'lib, eng yuqori ishlash tezligi, ko'p yadroli ishlov berish quvvati va ko'plab ilg'or texnologiyalarni taqdim etadi. Intel i9 protsessorlari, asosan, og'ir vazifalarni bajarishda, o'yinlar, video montaj, 3D modellashtirish, ilmiy hisoblash va boshqa yuqori darajadagi ishlov berish talab qiladigan vazifalar uchun mo'ljallangan.
+
+Asosiy Xususiyatlari:
+Ko'p Yadrolar va Tablolar: Intel i9 protsessorlarida ko'pincha 8, 10, 12 yoki undan ko'proq yadro mavjud. Bu ko'p yadroli ishlov berish quvvatini ta'minlab, ko'p vazifali ishlashda juda samarali bo'ladi. Ko'p yadroli ishlov berish og'ir hisoblash ishlarini tez va samarali amalga oshirish imkonini beradi.
+
+Hyper-Threading Texnologiyasi: Intel i9 protsessorlarida Hyper-Threading texnologiyasi mavjud, bu har bir yadro uchun ikki virtual oqimni yaratadi. Bu texnologiya multitaskingni yanada samarali qilishga yordam beradi va ko'plab dasturlarni bir vaqtda ishlatishni qo'llab-quvvatlaydi.
+
+Yuqori Ishlash Tezligi: Intel Core i9 protsessorlari yuqori takt tezligiga ega, ba'zi modellar 5.0 GHz yoki undan yuqori tezlikka chiqishi mumkin. Bu tezlik intensiv ishlov berish va o'yinlar uchun juda muhimdir.
+
+Overclocking Imkoniyati: Ba'zi i9 protsessorlari overclocking (tezlikni oshirish) imkoniyatini taqdim etadi. Bu foydalanuvchilarga protsessorni standartdan yuqori tezlikda ishlatishga imkon beradi, bu esa qo'shimcha ishlash quvvatini ta'minlaydi.
+
+Turbo Boost Texnologiyasi: Intel Turbo Boost texnologiyasi protsessorning ishlash tezligini avtomatik ravishda oshiradi, agar protsessor ko'proq quvvatga ehtiyoj sezsa. Bu o'yinlar yoki og'ir dasturlarni ishlatishda samarali bo'ladi.
+
+L3 Cache: i9 protsessorlarida katta hajmdagi L3 cache xotira mavjud, bu tezkor ma'lumotlarga tezroq kirish imkoniyatini beradi va ishlash samaradorligini oshiradi.
+
+Grafik Ishlov Berish: Ba'zi i9 protsessorlarida Intel UHD Graphics yoki boshqa grafik protsessorlar mavjud. Biroq, yuqori darajadagi grafik ishlov berish uchun alohida grafik kartalar (GPU) tavsiya etiladi.
+
+Qattiq Energiya Talablari: i9 protsessorlari yuqori ishlash quvvatiga ega bo'lsa-da, ular ko'proq energiya sarflashi mumkin. Bu, ayniqsa, overclocking qilishda va intensiv ishlov berish jarayonlarida sezilarli bo'ladi.
+
+Intel i9 Protsessorlarining Foydalanish So'halari:
+Yuqori Darajadagi O'yinlar: i9 protsessorlari yuqori grafiklar va tezkor ishlashni talab qiladigan o'yinlar uchun juda mos keladi. Bu protsessorlar eng so'nggi o'yinlarni yuqori sifatli grafikalar bilan o'ynash uchun kerakli quvvatni ta'minlaydi.
+
+Video Montaj va Ilmiy Hisoblash: Intel i9 protsessorlari, og'ir video montaj dasturlari (masalan, Adobe Premiere Pro) va ilmiy hisoblash yoki 3D modellashtirish uchun juda mos keladi. Ular katta hajmdagi videolarni tahrirlash yoki murakkab hisoblashlarni bajarish uchun zarur bo'lgan barcha quvvatni ta'minlaydi.
+
+Virtualizatsiya: Ko'p yadroli ishlov berish va Hyper-Threading texnologiyasi yordamida i9 protsessorlari virtual mashinalarni yaratish va boshqarishda samarali ishlaydi. Bu serverlar yoki ishlab chiqarish tizimlarida ishlashda foydalidir.
+
+Kreativ Ishlar: Grafik dizayn, 3D animatsiya, musiqiy ishlab chiqish kabi kreativ ishlar uchun i9 protsessorlarining yuqori ishlash imkoniyatlari juda foydalidir.
+
+Intel i9 Protsessorlarining Kamchiliklari:
+Narx: Intel i9 protsessorlari yuqori narxga ega, shuning uchun ular ko'proq professional foydalanuvchilarga, o'yinchilar va texnik jihatdan talabchan foydalanuvchilarga mo'ljallangan. Bu protsessorlar odatdagi byudjetli foydalanuvchilar uchun juda qimmat bo'lishi mumkin.
+
+Energiya Sarfi: i9 protsessorlarining ishlash quvvati yuqori bo'lsa-da, ular ko'proq energiya sarflaydi, bu esa sovutish tizimlarini va batareya ishlash muddatini boshqarishda muammolar tug'dirishi mumkin (noto'g'ri sovutish tizimlari ishlatilsa).
+
+Sovutish Talablari: Yuqori ishlash tezligi va energiya sarfi sababli, i9 protsessorlari yaxshi sovutish tizimiga muhtoj. Haroratni boshqarish uchun kuchli sovutish tizimi kerak bo'ladi, aks holda protsessor tezda qizib ketishi mumkin.
+
+Xulosa:
+Intel Core i9 protsessorlari yuqori darajadagi ishlov berish quvvati, ko'p yadroli ishlov berish va ilg'or texnologiyalarni taqdim etadi. Ular yuqori darajadagi o'yinlar, video montaj, ilmiy hisoblash va boshqa og'ir vazifalar uchun ideal. Biroq, ular yuqori narx va energiya sarfi bilan ajralib turadi. Agar siz yuqori ishlashni talab qiladigan dasturlarni ishlatadigan foydalanuvchi bo'lsangiz, Intel i9 protsessorlari juda yaxshi variant bo'ladi.""",
+                            R.drawable.intel_i9,
+                            "suQnh1TvGHw"
+                        ),
+
                         )
-                    )
                 ),
                 brand_model(
                     "AMD", arrayListOf(
@@ -248,6 +349,54 @@ Narx va samaradorlik: Ryzen 7 protsessorlari yuqori samaradorlikni maqbul narxda
 Ko‘p yadroli ishlov berish: Ko‘p yadroli ilovalar va multitasking uchun juda mos.
                     """,
                             R.drawable.ryzen_7, "PyG1vYXj4Vo"
+                        ), pc_model(
+                            "AMD Ryzen 9",
+                            """AMD Ryzen 9 — bu AMD kompaniyasining yuqori darajadagi protsessorlari oilasiga kiradi, va ular asosan yuqori ishlash quvvatini talab qiladigan vazifalar uchun mo'ljallangan. Ryzen 9 protsessorlari ko'p yadroli ishlov berish, multitasking, o'yinlar, video montaj, ilmiy hisoblash va boshqa og'ir vazifalarni samarali bajaradi. AMD Ryzen 9 protsessorlari Intel Core i9 protsessorlarining raqibi sifatida o'rnatilgan.
+
+Asosiy Xususiyatlari:
+Ko'p Yadroli Texnologiya: Ryzen 9 protsessorlarida ko'plab yadro va iplar mavjud. Masalan, ba'zi Ryzen 9 protsessorlarida 12 ta yoki 16 ta yadro va 24 ta yoki 32 ta ip mavjud. Bu ko'p yadroli ishlov berish ko'p vazifali ishlashda juda samarali bo'ladi, masalan, video tahrirlash, ilmiy hisoblash, va og'ir dasturlarni ishlatishda.
+
+Zen Arxitekturasi: Ryzen 9 protsessorlari Zen arxitekturasi asosida ishlab chiqarilgan. Bu arxitektura, Intelning Core seriyasiga qaraganda, ko'plab yadro va iplar bilan yuqori samaradorlikni ta'minlashga yordam beradi, shuningdek, quvvat samaradorligini yaxshilaydi.
+
+Precision Boost va XFR Texnologiyalari: Ryzen 9 protsessorlarida Precision Boost va XFR (Extended Frequency Range) texnologiyalari mavjud. Bu texnologiyalar protsessorning ishlash tezligini avtomatik ravishda oshiradi, agar vazifa qiyinlashsa yoki qo'shimcha ishlov berish quvvati kerak bo'lsa. Bu ishlashni yanada yaxshilaydi.
+
+Overclocking Imkoniyati: AMD Ryzen 9 protsessorlari overclocking (tezlikni oshirish) imkoniyatini taqdim etadi, bu esa maksimal ishlash tezligini olish imkonini beradi. Bunday protsessorlar o'yinlar yoki boshqa yuqori talablar bilan ishlashda juda foydalidir.
+
+L3 Cache: Ryzen 9 protsessorlarida katta hajmdagi L3 cache (32 MB yoki undan ko'p) mavjud bo'lib, bu tezkor ma'lumotlarga tezroq kirish imkoniyatini yaratadi va umumiy ishlashni tezlashtiradi.
+
+PCIe 4.0: Ryzen 9 protsessorlari PCIe 4.0 texnologiyasini qo'llab-quvvatlaydi, bu esa yuqori tezlikda ma'lumot uzatishni ta'minlaydi. Bu texnologiya xotira qurilmalari, SSDlar va grafik kartalarini tezroq ishlatishni ta'minlaydi.
+
+Grafik Ishlov Berish: Ryzen 9 protsessorlari asosan alohida grafik kartalar (GPU) bilan ishlash uchun mo'ljallangan, lekin ba'zi modelarda integratsiyalangan grafik mavjud (masalan, Ryzen 9 3400G). Biroq, yuqori darajadagi o'yinlar yoki video tahrir qilish uchun alohida GPU talab etiladi.
+
+Ryzen 9 Protsessorlarining Foydalanish So'halari:
+Yuqori Darajadagi O'yinlar: Ryzen 9 protsessorlari eng so'nggi o'yinlarni yuqori grafik sozlamalarida o'ynash uchun mo'ljallangan. Ko'p yadro va yuqori tezlik o'yinlarni yuqori sifatli grafikalar bilan o'ynash uchun zarur bo'lgan quvvatni ta'minlaydi.
+
+Video Montaj va Ilmiy Hisoblash: Ryzen 9 protsessorlari video tahrirlash va ilmiy hisoblash ishlarini samarali bajaradi. Professional video montaj dasturlari, masalan, Adobe Premiere Pro yoki DaVinci Resolve, ko'plab yadro va iplarni talab qiladi, bu esa Ryzen 9 protsessorlarida juda yaxshi ishlaydi.
+
+3D Modellash va Rendering: Ryzen 9 protsessorlari 3D modellash va rendering kabi og'ir grafik ishlov berishda samarali ishlaydi. Ular bu turdagi vazifalarni tez va samarali bajarishda yordam beradi.
+
+Virtualizatsiya: Ko'p yadroli ishlov berish va yuqori samaradorlik ryzen 9 protsessorlarini virtualizatsiya, serverlar, va ko'p mashinali tizimlar uchun juda yaxshi variant qiladi.
+
+Kreativ Ishlar va Ilovalar: Grafik dizayn, 3D animatsiya, musiqiy ishlab chiqish kabi kreativ ishlar uchun Ryzen 9 protsessorlarining yuqori ishlash imkoniyatlari juda foydalidir.
+
+Ryzen 9 Protsessorlarining Kamchiliklari:
+Narx: Ryzen 9 protsessorlari yuqori samaradorlikka ega bo'lsada, ular qimmat va byudjetli foydalanuvchilar uchun mos kelmasligi mumkin. Bu protsessorlar asosan professional foydalanuvchilar uchun mo'ljallangan.
+
+Energiya Sarfi: Ryzen 9 protsessorlari yuqori ishlash tezligi va ko'p yadroli quvvatga ega bo'lib, ular ko'proq energiya sarflashi mumkin. Bu, ayniqsa, overclocking qilganda yoki og'ir ishlov berish paytida sezilarli bo'lishi mumkin.
+
+Sovutish Talablari: Yuqori ishlash quvvati va energiya sarfi sababli, Ryzen 9 protsessorlari yaxshi sovutish tizimiga muhtoj. Yaxshi sovutish tizimi bo'lmasa, protsessor qizib ketishi mumkin.
+
+Xulosa:
+AMD Ryzen 9 protsessorlari yuqori darajadagi ishlov berish quvvatini, ko'p yadroli ishlov berish va ilg'or texnologiyalarni taqdim etadi. Ular yuqori darajadagi o'yinlar, video montaj, ilmiy hisoblash, 3D modellash va boshqa og'ir vazifalar uchun ideal. Bu protsessorlar yuqori narx va energiya sarfi bilan ajralib turadi, ammo yuqori darajadagi samaradorlikni ta'minlaydi. Agar siz yuqori ishlashni talab qiladigan dasturlarni ishlatadigan foydalanuvchi bo'lsangiz, AMD Ryzen 9 protsessorlari juda yaxshi variant bo'ladi.
+
+
+
+
+
+
+""",
+                            R.drawable.ryzen_9,
+                            "3enpjstERmE"
                         )
                     )
                 ),
@@ -311,6 +460,92 @@ Apple M2 chipi, ayniqsa MacBook Air va 13 dyuymli MacBook Pro kabi qurilmalarda 
                 ),
                 brand_model(
                     "Snapdragon", arrayListOf(
+                        pc_model(
+                            "Snapdragon 400 series",
+                            """Snapdragon 400 series — bu Qualcomm kompaniyasining arzon va o'rtacha darajadagi mobil protsessorlar oilasiga kiradi. Bu seriya, asosan, byudjetli smartfonlar va o'rta darajadagi qurilmalar uchun mo'ljallangan. Snapdragon 400 seriyasidagi protsessorlar, foydalanuvchiga umumiy foydalanish, o'yinlar, multimedia va internet uchun qulay ishlashni ta'minlaydi, lekin yuqori darajadagi ishlov berish yoki resurslarni talab qiladigan vazifalar uchun mo'ljallangan yuqori darajadagi protsessorlar bilan raqobatlashmaydi.
+
+Asosiy Xususiyatlari:
+Arzon Narx: Snapdragon 400 seriyasi protsessorlari arzon narxga ega bo'lib, byudjetli smartfonlar va o'rta darajadagi qurilmalar uchun ideal tanlovdir. Ular foydalanuvchiga asosan kundalik ishlov berish quvvati va samaradorlikni ta'minlaydi.
+
+Kichik Yadroli Dizayn: Snapdragon 400 seriyasidagi protsessorlar odatda 4 yoki 8 yadroli dizaynni taqdim etadi. Bu protsessorlar foydalanuvchiga yaxshi multitasking imkoniyatini beradi, lekin yuqori darajadagi ishlov berish uchun ko'proq yadro va kuchliroq protsessorlar talab etiladi.
+
+Adreno Grafikasi: Snapdragon 400 seriyasi protsessorlarida Adreno grafika protsessori mavjud. Bu grafik protsessor foydalanuvchiga o'rtacha darajadagi o'yinlar, video tomosha qilish va multimedia ilovalarini ishlatishda samarali ishlashni ta'minlaydi.
+
+LTE Qo'llab-quvvatlash: Snapdragon 400 seriyasidagi ba'zi protsessorlar LTE (4G) tarmog'ini qo'llab-quvvatlaydi, bu esa tezkor internet aloqasini ta'minlashga yordam beradi. Bu smartfonlar uchun mobil internet aloqasini yaxshilash imkonini yaratadi.
+
+Energiyani Samarali Ishlatish: Qualcomm Snapdragon 400 seriyasidagi protsessorlar, energiya samaradorligi uchun optimallashtirilgan bo'lib, bu uzoq vaqt davomida qurilmaning batareya ishlash muddatini oshiradi.
+
+Qurilmaning Samaradorligi: Snapdragon 400 seriyasi protsessorlari o'rtacha ishlash tezligi va samaradorlikni ta'minlaydi. Ular ko'pchilik foydalanuvchilar uchun kundalik ishlov berish, ijtimoiy tarmoqlarni ko'rish, internetni surish va video tomosha qilish kabi vazifalarni yaxshi bajaradi.
+
+Snapdragon 400 Seriyasining Foydalanish So'halari:
+Byudjetli Smartfonlar: Snapdragon 400 seriyasidagi protsessorlar asosan byudjetli smartfonlar va o'rta darajadagi qurilmalar uchun ishlab chiqilgan. Bu protsessorlar arzon narxdagi qurilmalarda yaxshi ishlashni ta'minlaydi.
+
+Multimedia va Internet: Snapdragon 400 seriyasidagi protsessorlar o'rtacha darajadagi video tomosha qilish, internetni surish va ijtimoiy tarmoqlarda vaqt o'tkazish kabi kundalik vazifalarni bajarishda samarali ishlaydi.
+
+O'yinlar: Bu seriya protsessorlari o'rtacha darajadagi o'yinlarni o'ynash uchun mos keladi, ammo yuqori grafiklar va yuqori darajadagi o'yinlar uchun yaxshiroq protsessorlar talab etiladi.
+
+VoIP va Aloqa Ilovalari: Snapdragon 400 seriyasi protsessorlari, VoIP ilovalari (masalan, Skype, WhatsApp) va boshqa aloqa ilovalarini ishlatishda samarali ishlaydi.
+
+Kamchiliklari:
+Cheklangan Ishlov Berish Quvvati: Snapdragon 400 seriyasidagi protsessorlar yuqori darajadagi ishlov berish talab qiladigan vazifalar uchun yaroqsizdir. Ular ko'proq oddiy va o'rtacha darajadagi ishlov berish uchun mo'ljallangan.
+
+Grafika va O'yinlar: Bu seriya protsessorlari yuqori darajadagi o'yinlar va grafik ishlov berishni qo'llab-quvvatlamaydi. Agar foydalanuvchi yuqori sifatli o'yinlar o'ynashni xohlaydigan bo'lsa, Snapdragon 400 seriyasidagi protsessorlar kamchilikka ega bo'lishi mumkin.
+
+Kam Yadro va Resurslar: Snapdragon 400 seriyasidagi protsessorlar ko'proq yadro va resurslarga ega yuqori darajadagi protsessorlar bilan raqobatlashishga qodir emas. Bu ko'plab ko'p yadroli ishlov berishni talab qiladigan vazifalar uchun cheklovlar yaratadi.
+
+Xulosa:
+Snapdragon 400 series protsessorlari byudjetli va o'rta darajadagi smartfonlar uchun juda yaxshi tanlovdir. Ular kundalik vazifalarni bajarishda, internetni surishda, multimedia tomosha qilishda va o'rtacha darajadagi o'yinlarda yaxshi ishlaydi. Biroq, yuqori darajadagi ishlov berish va grafiklarni talab qiladigan vazifalar uchun ular kamchilikka ega. Agar siz yuqori darajadagi o'yinlarni o'ynash yoki og'ir ishlov berishni amalga oshirishni rejalashtirmasangiz, Snapdragon 400 seriyasi yaxshi variant bo'lishi mumkin.""",
+                            R.drawable.snapdragon_400,
+                            "DjtohyNEM6w"
+                        ),
+
+                        pc_model(
+                            "Snapdragon 600 series",
+                            """Snapdragon 600 series — bu Qualcomm kompaniyasining o'rtacha darajadagi mobil protsessorlar oilasiga kiradi, va u yuqori samaradorlik bilan arzon narxdagi smartfonlar va qurilmalarga mo'ljallangan. Snapdragon 600 seriyasi, umumiy foydalanish, multimedia, o'yinlar va multitasking uchun yaxshi ishlashni ta'minlaydi, lekin yuqori darajadagi ishlov berish yoki resurslarni talab qiladigan vazifalar uchun Snapdragon 800 seriyasiga qaraganda pastroq samaradorlikni ko'rsatadi.
+
+Asosiy Xususiyatlari:
+Yuqori Samaradorlik va Keng Qo'llanilishi: Snapdragon 600 seriyasi protsessorlari o'rtacha va yuqori darajadagi ishlov berishni ta'minlaydi, bu esa ularni o'rtacha narxdagi smartfonlar va o'rta darajadagi qurilmalar uchun yaxshi tanlov qiladi. Ular foydalanuvchiga o'yinlar, internetni surish, video tomosha qilish va boshqa multimedia ilovalarini samarali bajarishga yordam beradi.
+
+Kichik va Yaxshilangan Yadro Dizayni: Snapdragon 600 seriyasidagi protsessorlar, 4 yoki 8 yadroli konfiguratsiyalarda bo'lishi mumkin. Bu ko'p yadroli dizayn, ko'p vazifali ishlov berishda samarali ishlashni ta'minlaydi. Yadro ishlash tezligi odatda 1.8 GHz dan 2.0 GHz gacha bo'ladi.
+
+Adreno Grafikasi: Snapdragon 600 seriyasidagi protsessorlar Adreno grafika protsessoriga ega bo'lib, o'rtacha darajadagi o'yinlar va multimedia ilovalarini yaxshi ishlatishga imkon beradi. Adreno grafikasi yuqori sifatli video va o'yinlarni qo'llab-quvvatlaydi, lekin yuqori darajadagi grafik ishlov berish uchun yuqori darajadagi protsessorlar talab etiladi.
+
+LTE Qo'llab-quvvatlash: Snapdragon 600 seriyasidagi protsessorlar LTE (4G) aloqasini qo'llab-quvvatlaydi, bu esa tezkor internetni ta'minlaydi. Bu smartfonlar uchun mobil internet aloqasini yaxshilash imkonini yaratadi.
+
+Energiyani Samarali Ishlatish: Snapdragon 600 seriyasi protsessorlari energiya samaradorligi uchun optimallashtirilgan bo'lib, batareya ishlash muddatini oshirishga yordam beradi. Bu arzon va o'rtacha darajadagi qurilmalar uchun muhim afzallikdir.
+
+Snapdragon Hexagon DSP: Hexagon DSP (Digital Signal Processor) texnologiyasi yordamida Snapdragon 600 seriyasi protsessorlari audio, video va sensorli ishlov berishni samarali bajaradi. Bu texnologiya, masalan, kamera va avtonomiyatni yaxshilash uchun ishlatiladi.
+
+Snapdragon 600 Seriyasining Foydalanish So'halari:
+O'rta Darajadagi Smartfonlar: Snapdragon 600 seriyasi protsessorlari o'rta darajadagi smartfonlar uchun idealdir. Ular yaxshi ishlashni, batareya samaradorligini va arzon narxni ta'minlaydi.
+
+Multimedia va Internet: Snapdragon 600 seriyasidagi protsessorlar, video tomosha qilish, internetni surish va ijtimoiy tarmoqlarda faoliyat yuritish kabi kundalik vazifalarni bajarishda yaxshi ishlaydi.
+
+O'yinlar: Bu seriya protsessorlari o'rtacha darajadagi o'yinlarni o'ynash uchun mos keladi. Ular yuqori grafikli o'yinlar uchun juda mos bo'lmasligi mumkin, ammo ko'plab o'yinlarni o'ynashda yaxshi natijalar ko'rsatadi.
+
+Multitasking: Snapdragon 600 seriyasidagi protsessorlar ko'p yadroli ishlov berishni qo'llab-quvvatlaydi, bu esa bir nechta ilovalar yoki vazifalarni bir vaqtning o'zida bajarishda samarali ishlashni ta'minlaydi.
+
+VoIP va Aloqa Ilovalari: Snapdragon 600 seriyasi protsessorlari, masalan, Skype, WhatsApp kabi VoIP ilovalarini ishlatishda samarali ishlaydi, va umumiy kommunikatsiya ilovalarini qo'llab-quvvatlaydi.
+
+Kamchiliklari:
+Cheklangan Ishlov Berish Quvvati: Snapdragon 600 seriyasi protsessorlari yuqori darajadagi ishlov berishni talab qiladigan vazifalar uchun yaroqsizdir. Bu protsessorlar yuqori darajadagi ilmiy hisoblash yoki video tahrir qilish kabi vazifalarda pastroq ishlash ko'rsatkichlarini taqdim etadi.
+
+Grafika va O'yinlar: Snapdragon 600 seriyasi o'yinlar uchun yaxshi ishlaydi, lekin eng so'nggi va yuqori grafikli o'yinlar uchun yaroqsizdir. Agar siz yuqori sifatli o'yinlarni o'ynashni xohlasangiz, yuqori darajadagi protsessorlar yaxshiroq variant bo'lishi mumkin.
+
+Kengaytirilgan Funksiyalar: Snapdragon 600 seriyasidagi protsessorlar yuqori darajadagi kameralar, 5G qo'llab-quvvatlash yoki boshqa ilg'or funksiyalarni taqdim etmaydi. Ba'zi foydalanuvchilar uchun bu cheklovlar bo'lishi mumkin.
+
+Xulosa:
+Snapdragon 600 series protsessorlari o'rta darajadagi smartfonlar va qurilmalar uchun ajoyib variant bo'lib, ular yaxshi ishlashni, samarali energiya ishlatishni va arzon narxni ta'minlaydi. O'rtacha darajadagi o'yinlar, video tomosha qilish, internetni surish va multitasking kabi kundalik vazifalar uchun mukammaldir. Biroq, yuqori darajadagi o'yinlar yoki og'ir ishlov berish talab qiladigan vazifalar uchun ular kamchilikka ega. Agar siz o'rtacha darajadagi qurilmani ishlatish niyatida bo'lsangiz, Snapdragon 600 seriyasi yaxshi tanlov bo'lishi mumkin.
+
+
+
+
+
+
+""",
+                            R.drawable.snapdragon_600,
+                            "fTNI6KQg444"
+                        ),
                         pc_model(
                             "Snapdragon 8cx Gen 3", """
 Snapdragon 8cx — bu Qualcomm kompaniyasining yuqori samarali ARM asosidagi protsessoridir. U ayniqsa Windows 10 va Windows 11 operatsion tizimida ishlash uchun mo‘ljallangan va asosan ultrabuklar, 2-in-1 noutbuklar va boshqa mobil qurilmalarda ishlatiladi. Snapdragon 8cx chipi, ayniqsa, yuqori energiya samaradorligi, uzoq batareya muddati va kuchli ishlov berish imkoniyatlari bilan tanilgan.
@@ -768,9 +1003,67 @@ Samsung 860 EVO 500GB — bu yaxshi ishlash va ishonchlilikni ta'minlaydigan SSD
                     "Western Digital", arrayListOf(
                         pc_model(
                             "WD Black SN850X 1TB", """
-                    WD Black SN850X 1TB – ultra-fast PCIe Gen 4 SSD for gaming and high-performance workloads...
-                    """,
-                            0, ""
+                  WD Black SN850X 1TB — bu o'yinchilar, kontent yaratish mutaxassislari va tezkor va ishonchli saqlashni talab qiladigan foydalanuvchilar uchun mo'ljallangan yuqori samarali SSD (Solid-State Drive). Western Digital kompaniyasining WD Black seriyasiga kiradi va o'yinlar, video tahrir qilish va boshqa ma'lumot talab qiladigan ishlar uchun mo'ljallangan tezkor va katta hajmli saqlash qurilmasidir.
+
+Asosiy Xususiyatlar:
+Interfeys:
+
+PCIe Gen 4.0 x4 interfeysini ishlatadi, bu eski PCIe Gen 3.0 SSDlarga qaraganda tezroq ma'lumot uzatish tezligini ta'minlaydi. Bu interfeys yangilangan o'yin kompyuterlari, noutbuklar va konsollar bilan mos keladi.
+Saqlash Hajmi:
+
+1TB saqlash hajmi taqdim etadi, bu o'yinlar, videolar va boshqa katta fayllar uchun yetarli joy beradi. Bu hajm tezlik va narxning yaxshi muvozanatini ta'minlaydi.
+O'qish va Yozish Tezliklari:
+
+7300 MB/s o'qish tezligi va 6600 MB/s yozish tezligi bilan ajralib turadi. Ushbu tezliklar uni eng tezkor NVMe SSDlardan biriga aylantiradi, bu esa tezkor yuklash va fayl uzatishni ta'minlaydi.
+Mustahkamlik:
+
+SSD 600TBW (Terabytes Written) gacha yozish imkoniyatiga ega bo'lib, uzoq muddat ishlash uchun mo'ljallangan. Bu ko'p ma'lumot yozish vaqti davomida ishonchli ishlashni ta'minlaydi.
+Issiqlikni boshqarish:
+
+Qurilma issiqlikni boshqarish va heatsink bilan moslik (ba'zi konfiguratsiyalarda) imkoniyatlariga ega, bu esa intensiv ishlar davomida tezlikni saqlashga yordam beradi.
+O'yin rejimi:
+
+O'yin rejimi mavjud bo'lib, bu o'yinlar uchun ishlashni optimallashtiradi, kechikishni kamaytiradi va tezlikni oshiradi.
+Dasturiy Ta'minot:
+
+WD Black Dashboard dasturi bilan SSD holatini kuzatish, firmware yangilash va ishlashni optimallashtirish mumkin.
+Orqaga moslik:
+
+PCIe 4.0 qo'llab-quvvatlaydi, ammo PCIe 3.0 bilan ham mos keladi, bu eski tizimlarda ham yaxshi ishlashni ta'minlaydi.
+Ishonchlilik:
+
+WD Black seriyasiga xos bo'lgan 5 yil kafolat bilan ta'minlangan.
+Foydalanish Sohalari:
+O'yinlar:
+
+WD Black SN850X o'yinlar uchun ideal variant bo'lib, tez yuklash vaqtlarini ta'minlaydi, o'yinlarni samarali ishlatishga imkon beradi va o'yinlar davomida samarali ishlashni ta'minlaydi.
+Kontent Yaratish:
+
+Video tahrirchilari, fotografiklar va boshqa kontent yaratish mutaxassislari uchun tezkor o'qish va yozish tezliklari ish jarayonini tezlashtiradi, bu esa fayllarni tezroq ko'chirish, tahrirlash va render qilish imkonini beradi.
+Yuqori Samarali Kompyuterlar:
+
+Bu SSD yuqori ishlov berish talab qiladigan dasturlar uchun ham yaxshi ishlaydi, masalan, dasturchilar, ma'lumotlar olimlari va katta ma'lumotlar bilan ishlaydigan foydalanuvchilar uchun.
+Konsollarga Upgrade:
+
+PlayStation 5 bilan mos keladi va konsol ishlashini yaxshilash uchun qo'shimcha saqlash maydoni sifatida ishlatilishi mumkin.
+Afzalliklari:
+Ajoyib tezlik: PCIe Gen 4.0 qo'llab-quvvatlashi tezlikni yuqori darajaga ko'taradi, bu esa yuqori ishlov berish talab qiladigan ishlar uchun ideal.
+1TB hajm: Ma'lumotlar uchun yetarli joy va yaxshi narx.
+O'yin rejimi: O'yinlar uchun optimallashtirilgan ishlash.
+Ishtirok etuvchi issiqlikni boshqarish: Yuqori tezlikni saqlash uchun issiqlikni boshqarish texnologiyasi.
+Ishonchli va uzoq muddatli ishlash: 5 yil kafolat va yuqori mustahkamlik.
+Kamchiliklari:
+Narxi: SSD arzonroq variantlarga qaraganda qimmatroq, ammo tezligi va ishlashiga mos keladi.
+Oddiy foydalanuvchilar uchun ortiqcha: Agar siz yuqori tezlikni talab qilmagan oddiy ishlarni amalga oshirsangiz, bu SSD kerakli bo'lmasligi mumkin.
+Xulosa:
+WD Black SN850X 1TB o'yinchilar, kontent yaratish mutaxassislari va tezkor saqlashni talab qiladigan foydalanuvchilar uchun yuqori samarali va ishonchli SSD hisoblanadi. Uning tez o'qish va yozish tezliklari, katta hajmi va issiqlikni boshqarish imkoniyatlari uni har xil ishlov berish va o'yinlar uchun mukammal tanlovga aylantiradi. Agar siz yuqori tezlik va ishonchlilikni izlayotgan bo'lsangiz, bu SSD siz uchun ideal variant bo'lishi mumkin.
+
+
+
+
+
+
+  """, R.drawable.wd_sn850, "t5yC1PlhHJE"
                         )
                     )
                 )
@@ -866,8 +1159,10 @@ Juda yuqori darajadagi tizimlar yoki ikki GPU konfiguratsiyalari uchun mos emas.
                             R.drawable.tx650m, "ZhSjL6FsBgw"
                         )
                     )
+
+                ),
+
                 )
-            )
         )
 
         val coolingModels = main_model(
@@ -1156,7 +1451,6 @@ TP-Link TG-3468 — bu oddiy, ishonchli va arzon gigabit Ethernet tarmoq kartasi
                 )
             )
         )
-
 
 
 // Combine all parts into the main list
@@ -1920,6 +2214,814 @@ Canon CanoScan LiDE 400 yuqori sifatli, kompaktdir va uyda yoki kichik ofisda fo
             )
         )
 
+        val projectionModels = main_model(
+
+            "Projector", arrayListOf(
+
+                brand_model(
+                    "Epson",
+                    arrayListOf(
+
+                        pc_model(
+                            "Epson 3LCD",
+                            "Epson 3LCD texnologiyasi Epson tomonidan ishlab chiqilgan va foydalaniladigan mashhur proyeksiya texnologiyalaridan biridir. Ushbu texnologiya ranglarni aniqroq va yorqinroq aks ettirish uchun uchta alohida LCD (Liquid Crystal Display) chipidan foydalanadi. Epson 3LCD texnologiyasi bilan ishlaydigan proyektorlar quyidagi asosiy xususiyatlarga ega:\n" + "\n" + "3LCD texnologiyasining afzalliklari:\n" + "Yorqin ranglar:\n" + "Rangli yorug'lik chiqishi (Color Light Output, CLO) yuqori bo'lib, bu proyektor tasvirlarini yorqinroq va jonliroq qiladi.\n" + "Tabiiy tasvir sifati:\n" + "Ranglar aniqligiga katta e'tibor qaratilgan, bu esa ranglarni tabiiy va aniq aks ettirishni ta'minlaydi.\n" + "Ko'zga qulay:\n" + "Rang balansidagi barqarorlik ko'zlarni charchatmaydi.\n" + "Energiya tejovchi:\n" + "Kamroq energiya sarfi bilan yuqori tasvir sifati ta'minlanadi.\n" + "Mashhur Epson 3LCD proyektor modellari:\n" + "Epson EH-TW7100\n" + "\n" + "Resolutsiya: 4K PRO-UHD\n" + "Yorug'lik chiqishi: 3,000 lumen\n" + "Rangli chiqish: 3,000 lumen\n" + "Uy kinoteatri uchun mo'ljallangan.\n" + "Epson EB-X41\n" + "\n" + "Resolutsiya: XGA (1024x768)\n" + "Yorug'lik chiqishi: 3,600 lumen\n" + "Mobillik va oson boshqarish uchun yengil dizayn.\n" + "Epson EB-L200F\n" + "\n" + "Resolutsiya: Full HD (1920x1080)\n" + "Yorug'lik chiqishi: 4,500 lumen\n" + "Lazerni proyeksiya texnologiyasi bilan ishlaydi.\n" + "Epson BrightLink 1485Fi\n" + "\n" + "Resolutsiya: WUXGA (1920x1200)\n" + "Yorug'lik chiqishi: 5,000 lumen\n" + "Interaktiv va ta'lim muhitlari uchun mo'ljallangan.\n" + "Epson PowerLite 1781W\n" + "\n" + "Resolutsiya: WXGA (1280x800)\n" + "Yorug'lik chiqishi: 3,200 lumen\n" + "Ko'chma foydalanish uchun ultra yupqa dizayn.\n" + "Epson proyektorlarining qo'llanishi:\n" + "Uy kinoteatrlari: Uyda yuqori sifatli kinofilm tomosha qilish uchun.\n" + "Ta'lim: Sinflar va dars xonalarida interaktiv darslar o'tkazish.\n" + "Biznes: Prezentatsiyalar va yig'ilishlar uchun.\n" + "Ko'ngilochar tadbirlar: Ochiq havoda kinoseanslar yoki sport o'yinlarini tomosha qilish.\n" + "Epson 3LCD texnologiyasi ko'p foydalanuvchilar tomonidan yuqori sifat va ishonchliligi uchun qadrlanadi.\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n",
+                            R.drawable.epson3lcd,
+                            "J72DUYNsBEI"
+                        ),
+
+                        pc_model(
+                            "Epson EB-2065 5500",
+                            """Epson EB-2065 5500 modeli — bu yuqori sifatli tasvir va funksionallikni taklif etadigan proyektor. U asosan ta'lim, biznes uchrashuvlari va katta yig'ilishlar uchun mo'ljallangan. Ushbu model Epson’ning 3LCD texnologiyasi bilan jihozlangan bo'lib, yorqin va aniq ranglarni taqdim etadi.
+
+Texnik xususiyatlari:
+Texnologiya: Epson 3LCD
+Yorug'lik chiqishi: 5500 lumen (oq va rangli yorug'lik uchun)
+Resolutsiya: XGA (1024 x 768 piksel)
+Kontrast nisbati: 15,000:1
+Lampa muddati:
+Oddiy rejim: ~5,000 soat
+Eko rejim: ~10,000 soat
+Proyeksiya hajmi: 30" dan 300" gacha
+Ko'rish masofasi: 0.76 m ~ 7.62 m
+Tilayverish nisbati: 1.38:1 - 2.24:1 (zoom funksiyasi bilan)
+Lampa quvvati: 300W
+Rang reproduktsiyasi: 16,77 million rang.
+Ulanish imkoniyatlari:
+HDMI (HDMI x 2)
+VGA (kompyuter va boshqa qurilmalar uchun)
+USB A va USB B portlari
+RCA video (kompozit)
+RJ-45 (Ethernet) va Wi-Fi (opsion) orqali tarmoq ulanishi
+Audio kirish va chiqish.
+Afzalliklari:
+Yuqori yorug'lik: Yorqin sharoitlarda ham aniq va o'qilishi oson tasvirlarni taqdim etadi.
+Keng proyeksiya hajmi: Kichik xonalardan tortib katta auditoriyalarga qadar moslashadi.
+Oson sozlash: Keyston korreksiyasi, avtomatik yuklanish va Wi-Fi opsiyalari bilan moslashuvchanlik.
+Energiya tejamkorlik: Eko rejimida lampa muddati va quvvat sarfi optimallashtirilgan.
+Qo'llanilishi:
+Korporativ prezentatsiyalar: Keng ekran hajmi va aniq tasvir bilan biznes yig'ilishlarida foydalanish uchun ideal.
+Ta'lim: Sinflarda katta hajmdagi ma'lumotlarni ko'rsatish uchun mos.
+Tadbirlar va ko'ngilochar dasturlar: Film tomosha qilish yoki sport o'yinlarini katta ekranda namoyish qilish imkoniyati.
+Umumiy baho:
+Epson EB-2065 yuqori darajadagi funksionallik va ishlash qobiliyati bilan o'z sinfidagi eng yaxshi proyektorlardan biri hisoblanadi. U katta auditoriyalar va yorug' xonalar uchun mukammal yechim hisoblanadi.""",
+                            R.drawable.epson_2065,
+                            "flVYqt2XerU"
+                        ),
+
+                        pc_model(
+                            "Epson EB-536 ", """
+Epson EB-536 modeli kichik va o'rta hajmdagi xonalar uchun mo'ljallangan proyektor bo'lib, qisqa masofadan sifatli tasvirni taqdim etadi. Ushbu model ta'lim va biznes maqsadlarida ishlatiladi va Epson 3LCD texnologiyasi bilan jihozlangan, bu esa yorqin va tabiiy ranglarni ta'minlaydi.
+
+Texnik xususiyatlari:
+Texnologiya: Epson 3LCD
+Resolutsiya: XGA (1024 x 768 piksel)
+Yorug'lik chiqishi: 3400 lumen (oq va rangli yorug'lik uchun)
+Kontrast nisbati: 16,000:1
+Lampa muddati:
+Oddiy rejim: ~5,000 soat
+Eko rejim: ~10,000 soat
+Proyeksiya hajmi: 53" - 116" (asosiy masofada)
+Proyeksiya masofasi: 0.5 m - 1.2 m (qisqa masofa)
+Tilayverish nisbati: 0.55:1
+Lampa quvvati: 210W
+Rang reproduktsiyasi: 1.07 milliard rang.
+Ulanish imkoniyatlari:
+HDMI (bitta port)
+VGA (kompyuter ulash uchun)
+USB-A va USB-B
+RCA video kirish
+RS-232C (boshqaruv uchun)
+Audio kirish va chiqish.
+Afzalliklari:
+Qisqa masofadan proyeksiya: Kichik xonalar uchun mos, ya'ni proyektor devordan yaqin masofada joylashtirilsa ham katta tasvirni taqdim etadi.
+Yuqori yorqinlik: Yorug' xonalarda ham aniq va ravshan tasvirni ko'rsatadi.
+Keyston korreksiyasi: Tasvirni avtomatik ravishda tekislash funksiyasi mavjud.
+Tejamkorlik: Eko rejimda energiya tejash va lampa muddati uzaytirilgan.
+Ovoz imkoniyati: Ichki karnay orqali ovoz chiqishi, qo'shimcha karnay ulash imkoniyati.
+Qo'llanilishi:
+Ta'lim muhitlari: Dars xonalarida interaktiv ta'lim uchun ideal.
+Biznes foydalanishi: Prezentatsiya va yig'ilishlar uchun moslashuvchanlik.
+Uy foydalanishi: Film tomosha qilish yoki kichik tadbirlar uchun qulay.
+Umumiy baho:
+Epson EB-536 modeli o'zining qisqa masofadan aniq tasvir berish qobiliyati, yuqori sifatli ranglarni taqdim etishi va foydalanish qulayligi bilan ajralib turadi. Kichik xonalar va yorug' sharoitlar uchun ajoyib tanlovdir.
+
+""", R.drawable.epson_eb536, "63H2vdVqa3M"
+                        ),
+
+                        ),
+                ),
+                brand_model(
+                    "Optoma",
+                    arrayListOf(
+                        pc_model(
+                            "Optoma HD28e",
+                            """Optoma HD28e modeli - bu yuqori sifatli DLP (Digital Light Processing) texnologiyasiga asoslangan uy kinoteatrlari va boshqa ko'ngilochar tadbirlar uchun mo'ljallangan proyektor. Ushbu proyektor yuqori yorqinlik, aniqlik va jonli ranglarni taqdim etadi, bu esa uni turli sharoitlarda foydalanish uchun mos qiladi.
+
+Texnik xususiyatlari:
+Texnologiya: DLP
+Yorug'lik chiqishi: 3800 lumen
+Resolutsiya: Full HD (1920 x 1080 piksel)
+Kontrast nisbati: 30,000:1
+Proyeksiya hajmi: 28" dan 305" gacha
+Tilayverish nisbati: 1.47:1 - 1.62:1
+Proyeksiya masofasi: 1.2 m - 10 m
+Rang reproduktsiyasi: 1.07 milliard rang
+Lampa muddati:
+Oddiy rejim: ~6,000 soat
+Eko rejim: ~10,000 soat
+Dynamic rejim: ~15,000 soat
+3D qo'llab-quvvatlashi: Ha (Full 3D)
+Ulanish imkoniyatlari:
+HDMI (HDMI 2.0, 2 ta port)
+USB (quvvatlash uchun)
+Audio chiqish (3.5 mm port)
+RS-232C port (boshqaruv uchun)
+Afzalliklari:
+Yuqori aniqlik: Full HD tasvirlar va videolarni yuqori sifatda ko'rsatadi.
+Yorqin tasvir: 3800 lumen yorqinlik yorug' xonada ham aniq ko'rish imkonini beradi.
+Katta ekran tajribasi: Katta proyeksiya hajmi uni uy kinoteatri yoki katta ko'ngilochar tadbirlar uchun ideal qiladi.
+Uzoq muddatli lampa: Dynamic rejimda lampaning uzoq umr ko'rishi.
+3D qo'llab-quvvatlashi: 3D kontentni to'liq qo'llab-quvvatlaydi.
+Keyston korreksiyasi: Tasvirni to'g'rilash uchun qulaylik beradi.
+Qo'llanilishi:
+Uy kinoteatrlari: Oila va do'stlar bilan kinolarni katta ekranda tomosha qilish uchun.
+O'yinlar: O'yin konsollarini ulash va katta ekranda zavqlanish.
+Ko'ngilochar tadbirlar: Tadbirlar va sport o'yinlarini namoyish qilish uchun qulay.
+Biznes foydalanishi: Katta va yorqin prezentatsiyalar uchun ham ishlatilishi mumkin.
+Umumiy baho:
+Optoma HD28e modeli sifat va narx nisbati bo'yicha yuqori baholanadi. Yorqinligi, yuqori aniqligi va katta ekran imkoniyatlari bilan o'zini oqlaydi. Uy kinoteatri yoki ko'ngilochar foydalanish uchun juda yaxshi tanlovdir.
+
+
+
+
+
+
+""",
+                            R.drawable.optoma_hd28e,
+                            "ZA1Uryklu8o"
+                        ), pc_model(
+                            "Optoma HD36UST ",
+                            """Optoma HD36UST — bu ultra qisqa masofadan yuqori sifatli tasvirni taqdim etadigan DLP texnologiyasiga ega proyektor. U uy kinoteatrlari, ta'lim va biznes maqsadlari uchun mo'ljallangan bo'lib, katta ekranli tajribani kichik makonda taqdim etadi.
+
+Texnik xususiyatlari:
+Texnologiya: DLP
+Resolutsiya: Full HD (1920 x 1080 piksel)
+Yorug'lik chiqishi: 3600 lumen
+Kontrast nisbati: 25,000:1
+Proyeksiya hajmi: 85" dan 100" gacha
+Proyeksiya masofasi: 0.4 m - 0.6 m (ultra qisqa masofa)
+Tilayverish nisbati: ~0.25:1
+Lampa muddati:
+Oddiy rejim: ~4,000 soat
+Eko rejim: ~6,000 soat
+3D qo'llab-quvvatlashi: To'liq 3D (Full 3D)
+Ranglar: 1.07 milliard rang.
+Ulanish imkoniyatlari:
+2x HDMI (HDMI 1.4a)
+USB (quvvatlash uchun yoki multimedia ulanish)
+VGA (kompyuter ulanishi uchun)
+Audio kirish/chiqish (3.5 mm port)
+RJ-45 (Ethernet)
+RS-232C (boshqaruv uchun).
+Afzalliklari:
+Ultra qisqa masofa: Juda yaqin masofada katta tasvirni proyeksiya qilish imkonini beradi, bu esa kichik xonalar uchun ideal.
+Yuqori yorqinlik: 3600 lumen yorug' sharoitda ham aniq tasvir taqdim etadi.
+Full HD tasvir: Yuqori sifatli va ravon tasvirlar bilan uy kinoteatri tajribasi.
+3D qo'llab-quvvatlashi: 3D kontentni yuqori sifatda aks ettirish imkoniyati.
+Energiya tejamkorlik: Eko rejimi tufayli lampaning uzoq umr ko'rishi va quvvatni tejash.
+Ovoz integratsiyasi: Ichki dinamiklar yoki tashqi audio tizim bilan ishlash.
+Qo'llanilishi:
+Uy kinoteatri: Katta ekranli kinolar va sport o'yinlarini tomosha qilish uchun ideal.
+Ta'lim: Dars xonalarida qisqa masofadan interaktiv foydalanish imkoniyati.
+Biznes: Prezentatsiyalar va yig'ilishlar uchun mos.
+Ko'ngilochar tadbirlar: Film tomosha qilish yoki o'yin o'ynash uchun qulay.
+Umumiy baho:
+Optoma HD36UST ultra qisqa masofali proyektorlar orasida o'zining yuqori sifatli tasviri, yorqinligi va foydalanish qulayligi bilan ajralib turadi. Bu model kichik joylarda katta ekran tajribasi yaratmoqchi bo'lgan foydalanuvchilar uchun mukammal tanlov hisoblanadi.
+
+
+
+
+
+
+
+""",
+                            R.drawable.optoma_hd36,
+                            "aoDETyuI9o"
+                        ), pc_model(
+                            "Optoma ML1050STi",
+                            """Optoma ML1050STi modeli — bu ultra portativ proyektor bo'lib, qisqa masofadan yuqori sifatli tasvirni taqdim etadi. U ta'lim, biznes va ko'chma foydalanish uchun mo'ljallangan. Ushbu proyektor LED texnologiyasidan foydalanib, uzoq umr ko'rish va yuqori rang aniqligini ta'minlaydi.
+
+Texnik xususiyatlari:
+Texnologiya: DLP LED
+Resolutsiya: WXGA (1280 x 800 piksel)
+Yorug'lik chiqishi: 1,000 lumen
+Kontrast nisbati: 20,000:1
+Proyeksiya hajmi: 17" dan 100" gacha
+Proyeksiya masofasi: ~0.43 m - 3.5 m
+Tilayverish nisbati: 0.8:1 (qisqa masofa)
+Lampa muddati: ~30,000 soat (LED lampasi)
+Og'irligi: ~420 gram
+Rang reproduktsiyasi: 1.07 milliard rang.
+Ulanish imkoniyatlari:
+HDMI (MHL qo'llab-quvvatlovi bilan)
+USB port (multimedia va quvvatlash uchun)
+microSD karta uyasi (maksimal 32GB gacha)
+Wi-Fi (integratsiyalashgan yoki qo'shimcha donador bilan)
+Audio chiqish (3.5 mm port).
+Afzalliklari:
+Portativlik: Yengil va kichik o'lchamli, ko'chma foydalanish uchun juda qulay.
+Qisqa masofali proyeksiya: Yaqin masofadan katta ekran hosil qilish imkoniyati.
+LED texnologiyasi: Uzoq lampa muddati va kam texnik xizmat talab qiladi.
+Multimedia qo'llab-quvvatlovi: USB va microSD orqali to'g'ridan-to'g'ri kontent ijrosi.
+Wi-Fi ulanishi: Simsiz uzatish imkoniyati.
+Tez ishga tushish: LED lampasi tufayli proyektor tezda ishga tayyor bo'ladi.
+Qo'llanilishi:
+Biznes: Yig'ilishlar va taqdimotlar uchun juda mos.
+Ta'lim: Kichik dars xonalarida foydalanish uchun qulay.
+Sayohat: Ko'chma foydalanish uchun ideal.
+Uy foydalanishi: Kichik hajmdagi kinoteatr yoki o'yin uchun.
+Umumiy baho:
+Optoma ML1050STi modeli o'zining ixcham dizayni, qisqa masofadan proyeksiya qilish imkoniyati va uzoq umr ko'ruvchi LED lampasi bilan ajralib turadi. Bu model tez-tez harakatlanadigan yoki ko'chma proyektor talab qiladigan foydalanuvchilar uchun mukammal tanlov hisoblanadi.
+
+
+
+
+
+
+""",
+                            R.drawable.optoma_ml1050,
+                            "bVIHGh99xoc"
+                        )
+                    ),
+
+                    ),
+
+                )
+
+        )
+        var speakersModels = main_model(
+            "Speakers", arrayListOf(
+                brand_model(
+                    "JBL", arrayListOf(
+                        pc_model(
+                            "JBL Flip 5",
+                            """JBL Flip 5 — bu portativ Bluetooth karnay bo'lib, suvga chidamli dizayni, yuqori sifatli ovozi va uzoq batareya quvvati bilan ajralib turadi. Quvvatli karnaylar seriyasiga kiradi va tashqi foydalanish uchun juda mos keladi.
+
+Texnik xususiyatlari:
+Bluetooth versiyasi: 4.2
+Ovoz chiqishi: Mono (bitta speaker)
+Yorug'lik chiqishi (maksimal): 20W
+Batareya quvvati: 4800mAh
+Batareya ishlash vaqti: 12 soat (o'rtacha ovoz balandligi bilan)
+Suvga chidamlilik: IPX7 (1m chuqurlikda 30 daqiqa davomida suvga chidamli)
+Kenglik: 18.4 cm
+Og'irlik: 0.54 kg
+Ulanish: Bluetooth, USB-C porti (quvvatlash uchun)
+Ranglar: Qora, ko'k, yashil, qizil, oq va boshqalar
+Afzalliklari:
+Suvga chidamlilik: IPX7 sertifikati bilan, bu karnay suvga to'liq chidamli bo'lib, tashqi sharoitlarda foydalanishga juda mos.
+Portativlik: Yengil va kichik o'lchamli, ko'chma foydalanish uchun qulay.
+Qo'shimcha bass: JBL Bass Radiator texnologiyasi bilan kuchli va chuqur bass ovozini taqdim etadi.
+Batareya quvvati: 12 soatgacha ishlash vaqti.
+USB-C quvvatlash: Tez quvvatlanish imkoniyati.
+Narxi: ${'$'}120 atrofida (do'konga va mamlakatga qarab o'zgarishi mumkin).
+JBL Flip 5 — bu o'zining yuqori sifatli ovozi, kuchli bassi, uzoq batareya quvvati va suvga chidamliligi bilan ko'chma va tashqi foydalanish uchun juda mos keladi.
+
+
+
+
+
+
+""",
+                            R.drawable.jbl_flib,
+                            "WtXnSiPeskc"
+                        ), pc_model(
+                            "JBL Charge 5",
+                            """JBL Charge 5 — bu yuqori sifatli portativ Bluetooth karnay bo'lib, kuchli ovoz, ekstra bass va uzoq batareya ishlash vaqti bilan ajralib turadi. Suvga chidamli dizayni va mustahkam tuzilishi bilan tashqi sharoitlarda foydalanish uchun ideal.
+
+Texnik xususiyatlari:
+Bluetooth versiyasi: 5.1
+Ovoz chiqishi: Mono (bitta speaker)
+Yorug'lik chiqishi (maksimal): 30W
+Batareya quvvati: 7500mAh
+Batareya ishlash vaqti: 20 soat (o'rtacha ovoz balandligi bilan)
+Suvga chidamlilik: IP67 (chang va suvga chidamli, 1m chuqurlikda 30 daqiqa davomida suvga chidamli)
+Kenglik: 22 cm
+Og'irlik: 0.96 kg
+Ulanish: Bluetooth 5.1, USB-C porti (quvvatlash uchun)
+Ranglar: Qora, ko'k, yashil, qizil va boshqalar
+Afzalliklari:
+Suv va changga chidamli: IP67 sertifikati bilan, JBL Charge 5 suv va changga to'liq chidamli, tashqi sharoitlarda foydalanish uchun mukammal.
+Kuchli ovoz va bass: JBL Bass Radiator texnologiyasi va kuchli ovoz chiqishi bilan eng yaxshi musiqalarni tinglash imkoniyati.
+Batareya quvvati: 20 soatgacha ishlash vaqti, katta quvvatli 7500mAh batareya bilan.
+Powerbank funksiyasi: USB-A porti orqali boshqa qurilmalarga quvvat berish imkoniyati.
+Tez quvvatlash: USB-C porti orqali tez quvvatlanish va 4 soatda to'liq quvvatlanish.
+Narxi: ${'$'}180 atrofida (do'konga va mamlakatga qarab o'zgarishi mumkin).
+JBL Charge 5 — bu tashqi sharoitlarda foydalanish uchun ideal bo'lgan portativ karnay, kuchli ovoz, uzoq batareya ishlash va suvga chidamliligi bilan ajralib turadi.
+
+
+
+
+
+
+""",
+                            R.drawable.jbl_charge5,
+                            "b4aof_EKA78"
+                        )
+                    )
+                ),
+                brand_model(
+                    "Sony", arrayListOf(
+                        pc_model(
+                            "Sony SRS-XB43",
+                            """Sony SRS-XB43 — bu portativ Bluetooth karnay, ekstra bass funksiyasi, uzoq batareya quvvati va suvga chidamli dizayni bilan ajralib turadi. Bu model ayniqsa o'yinlar, partiyalar va tashqi sharoitlar uchun mos bo'lib, kuchli ovoz va bassni taqdim etadi.
+
+Texnik xususiyatlari:
+Bluetooth versiyasi: 5.0
+Ovoz chiqishi: Mono (bitta speaker)
+Yorug'lik chiqishi (maksimal): 50W
+Batareya quvvati: 4800mAh
+Batareya ishlash vaqti: 24 soat (o'rtacha ovoz balandligi bilan)
+Suvga chidamlilik: IP67 (suv va changga chidamli, 1m chuqurlikda 30 daqiqa davomida suvga chidamli)
+Kenglik: 68.4 cm
+Og'irlik: 2.9 kg
+Ulanish: Bluetooth 5.0, USB-C porti (quvvatlash uchun)
+Ranglar: Qora, ko'k, qizil
+Afzalliklari:
+Ekstra bass funksiyasi: Sony Extra Bass texnologiyasi bilan kuchli bass va ovoz chiqarishni taqdim etadi, bu musiqani yanada jonli qiladi.
+Suv va changga chidamli: IP67 sertifikati bilan, bu karnay suvga va changga to'liq chidamli, tashqi sharoitlarda foydalanish uchun juda mos.
+Kuchli ovoz va yorug'lik: Eng katta ovoz va yorug'lik effektlari bilan, partiyalar va tashqi tadbirlarga mos keladi.
+Batareya quvvati: 24 soatgacha ishlash vaqti, uzoq davom etadigan batareya bilan.
+Party Connect: Bir nechta Sony karnaylarini birlashtirib, katta hajmli ovoz tizimini yaratish imkoniyati.
+Narxi: ${'$'}250 atrofida (do'konga va mamlakatga qarab o'zgarishi mumkin).
+Sony SRS-XB43 — bu o'yinlar, partiyalar va tashqi sharoitlarda foydalanish uchun ideal bo'lgan portativ karnay, kuchli bass, uzoq batareya ishlash va suvga chidamliligi bilan ajralib turadi.""",
+                            R.drawable.sonysrs,
+                            "HRpW0OrdeTQ"
+                        ), pc_model(
+                            "Sony SRS-D4",
+                            """Sony SRS-D4 — bu kompyuter va multimedia uchun mo‘ljallangan yuqori sifatli 2.1 audio tizim bo‘lib, kuchli ovoz va bassni ta’minlaydi. Ushbu model kichik hajmda ham mukammal audio tajribasini taqdim etadi va o‘yin, filmlar, va musiqa tinglash uchun mos keladi.
+
+Texnik xususiyatlari:
+Ovoz tizimi: 2.1 (2 ta satellite speaker va 1 ta subwoofer)
+Chiqish quvvati: 27W (subwoofer: 14W, satellite speakerlar: 2x6.5W)
+Chastota diapazoni: 40 Hz – 20 kHz
+Ulanish: 3.5 mm audio jack
+Ovoz sozlamalari: Bass va ovoz balandligini boshqarish
+Material: Plastmassa korpus
+Og'irlik: 3.5 kg (umumiy)
+O'lchamlari:
+Subwoofer: 25.5 cm x 17.5 cm x 26 cm
+Satellite speakerlar: 9 cm x 16 cm x 8.5 cm
+Quvvat manbai: Elektr tarmog‘i orqali
+Ranglar: Qora
+Afzalliklari:
+Kuchli bass: Subwoofer kuchli va aniq bassni ta’minlab, musiqani yanada jonli qiladi.
+Ovoz balansi: Satellite speakerlar orqali yuqori va o‘rta chastotalar aniq chiqariladi.
+Oddiy ulanish: 3.5 mm audio jack orqali kompyuter, noutbuk yoki boshqa qurilmalar bilan oson ulanadi.
+Sozlanish imkoniyatlari: Ovoz va bassni oson boshqarish uchun tugmalar mavjud.
+Kichik va qulay dizayn: Stol ustiga o‘rnatish uchun mos hajm.
+Narxi: ${'$'}180 atrofida (do'konga va mamlakatga qarab farq qilishi mumkin).
+Sony SRS-D4 — bu kompyuter foydalanuvchilari va multimedia ixlosmandlari uchun mo‘ljallangan qulay va sifatli ovoz tizimi bo‘lib, filmlar, musiqa va o‘yinlarda yuqori audio tajribasini ta’minlaydi.
+
+
+
+
+
+
+""",
+                            R.drawable.sony_mijik,
+                            "fHZ1z1LOd1I",
+                        )
+                    )
+                ),
+                brand_model(
+                    "Logitech", arrayListOf(
+                        pc_model(
+                            "Logitech Z623",
+                            """Logitech Z623 — bu yuqori sifatli 2.1 audio tizim bo‘lib, kuchli bass, aniqlik, va THX sertifikatlangan ovoz bilan ajralib turadi. Ushbu model o‘yinlar, filmlar, va musiqa tinglash uchun juda mos bo‘lib, uyda foydalanish uchun ideal hisoblanadi.
+
+Texnik xususiyatlari:
+Ovoz tizimi: 2.1 (2 ta satellite speaker va 1 ta subwoofer)
+Chiqish quvvati:
+Umumiy quvvat: 200W RMS
+Subwoofer: 130W RMS
+Satellite speakerlar: 2x35W RMS
+Chastota diapazoni: 35 Hz – 20 kHz
+Sertifikat: THX (yuqori sifatli ovoz standartiga mos)
+Ulanish:
+3.5 mm audio jack
+RCA kirish porti
+Ovoz boshqaruvlari: Bass va ovoz balandligi uchun alohida boshqaruv tugmalari
+Subwoofer o‘lchamlari: 28.4 cm x 30.5 cm x 26.4 cm
+Satellite speaker o‘lchamlari: 11.6 cm x 19.6 cm x 12.4 cm
+Og‘irlik: 7 kg (umumiy)
+Quvvat manbai: Elektr tarmog‘i orqali
+Rang: Qora
+Afzalliklari:
+Kuchli va aniq ovoz: 200W quvvat bilan filmlar, o‘yinlar va musiqalarda immersiv audio tajribani ta’minlaydi.
+THX sertifikati: Yuqori sifatli ovoz standartlari asosida ishlab chiqarilgan.
+Bass boshqaruvi: Subwoofer orqali chuqur bass darajasini sozlash imkoniyati.
+Ko‘p ulanish imkoniyatlari: 3.5 mm jack va RCA kirishlari yordamida bir nechta qurilmalarga ulanish qulayligi.
+Qulay boshqaruv: Ovoz balandligi va bassni sozlash uchun tugmalar satellite speakerlaridan birida joylashgan.
+Narxi: ${'$'}160 atrofida (do'konga va mamlakatga qarab farq qilishi mumkin).
+Logitech Z623 — bu o‘yin ixlosmandlari va multimedia foydalanuvchilari uchun mukammal tanlov bo‘lib, kuchli ovoz, chuqur bass, va qulay boshqaruv bilan uyda immersiv audio tajribasini ta’minlaydi.
+
+
+
+
+
+
+
+""",
+                            R.drawable.logitech_z636,
+                            "8h5W_fjxvNY"
+                        ), pc_model(
+                            "Logitech Z906",
+                            """Logitech Z906 — bu yuqori sifatli 5.1 kanalli audio tizim bo‘lib, THX sertifikati, kuchli ovoz chiqishi va ko‘p turdagi ulanish imkoniyatlari bilan ajralib turadi. Ushbu model filmlar, o‘yinlar va musiqalarni teatr darajasidagi audio tajribada tinglash uchun ideal tanlovdir.
+
+Texnik xususiyatlari:
+Ovoz tizimi: 5.1 (4 ta satellite speaker, 1 ta markaziy speaker va 1 ta subwoofer)
+Chiqish quvvati:
+Umumiy quvvat: 500W RMS
+Subwoofer: 165W RMS
+Satellite speakerlar: 4x67W RMS
+Markaziy speaker: 67W RMS
+Sertifikat: THX, Dolby Digital, DTS
+Chastota diapazoni: 35 Hz – 20 kHz
+Ulanish:
+3.5 mm audio jack
+RCA kirish portlari
+Optik kirish
+Koaksial kirish
+6-kanalli to‘g‘ridan-to‘g‘ri ulanish
+Boshqaruv paneli: Kichik displeyli boshqaruv blok
+Fokus rejimi: Stereo, 4.1 va 5.1 holatlariga o‘tish imkoniyati
+O‘lchamlari:
+Subwoofer: 29.3 cm x 28.1 cm x 31.9 cm
+Satellite speakerlar: 10 cm x 16.6 cm x 9.4 cm
+Markaziy speaker: 16.6 cm x 10 cm x 9.4 cm
+Og‘irlik: 15 kg (umumiy)
+Quvvat manbai: Elektr tarmog‘i orqali
+Rang: Qora
+Afzalliklari:
+Kuchli ovoz chiqishi: 500W umumiy quvvat bilan immersiv audio tajriba.
+Sertifikatlar: THX, Dolby Digital, va DTS qo‘llab-quvvatlovi yuqori sifatli audio standartlarini ta’minlaydi.
+Ko‘p ulanish imkoniyatlari: 3.5 mm jack, RCA, optik, va koaksial kirishlar bilan bir nechta qurilmalarga ulanish imkoniyati.
+Surround ovoz: 5.1 kanalli tizim kinoteatr darajasidagi audio taqdim etadi.
+Boshqaruv qulayligi: Alohida boshqaruv paneli va masofadan boshqarish pulti bilan oson boshqarish.
+Narxi: ${'$'}300–${'$'}400 atrofida (do‘konga va mamlakatga qarab farq qilishi mumkin).
+Logitech Z906 — bu uy kinoteatri va o‘yin ixlosmandlari uchun mukammal tanlov bo‘lib, kuchli ovoz, chuqur bass, va ko‘p turdagi ulanish imkoniyatlari bilan yuqori darajadagi audio tajribani ta’minlaydi.
+""",
+                            R.drawable.logitech_z905,
+                            "9jxSFcMgwX0"
+                        )
+                    )
+                ),
+
+                )
+        )
+        var webcamModels = main_model(
+            "Web Cameras", arrayListOf(
+
+                brand_model(
+                    "Logitech", arrayListOf(
+                        pc_model(
+                            "Logitech C920", """Asosiy Texnik Xususiyatlar:
+Video Aniqligi: Full HD 1080p (1920 x 1080 piksel).
+Ovoz: Ikkita stereo mikrofon (har ikki tomonda) yuqori sifatli ovoz yozishni ta'minlaydi.
+Avtofokus: Ha, avtofokus texnologiyasi mavjud, bu esa har qanday masofada aniq tasvir olish imkonini beradi.
+Obyektiv: 78° ko'rish burchagi bilan shisha obyektiv.
+Yoritish Muvozanati: Avtomatik yorug'likni sozlash imkoniyati mavjud (RightLight 2 texnologiyasi).
+Ulanish: USB 2.0 port orqali ulanish.
+Qo'llanilishi:
+Video Qo'ng'iroqlar: Zoom, Microsoft Teams, Google Meet kabi platformalarda yuqori sifatli video qo'ng'iroqlar uchun mos.
+Streaming: Twitch yoki YouTube kabi platformalarda jonli efirlar uchun juda qulay.
+Video Yozuvlar: Full HD formatda yuqori sifatli video yozish imkoniyatini beradi.
+Qo'shimcha Funktsiyalar:
+Plug-and-Play: Drayver talab qilmaydi, oson sozlanadi.
+Tripod Ilgagi: Tripodga o'rnatish uchun maxsus ilgak bilan jihozlangan.
+Ilova Qo'llab-quvvatlovi: Logitech Capture ilovasidan foydalanib, sozlashlar va turli effektlarni qo'shish mumkin.
+Narxi:
+O'rtacha narx: ${'$'}70 - ${'$'}100 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+Yuqori sifatli video va audio.
+Professional ko'rinishdagi video yozuv va efirlarni ta'minlaydi.
+Kompaniya va uy sharoitida foydalanish uchun ideal.
+Kamchiliklari:
+4K video qo'llab-quvvatlanmaydi.
+USB-C ulanishi yo'q (faqat USB 2.0 mavjud).
+Umumiy Baho:
+Logitech C920 modeli o'zining narx va sifat nisbati bo'yicha eng mashhur web-kameralardan biri hisoblanadi. U yuqori aniqlikdagi video va ovoz sifati bilan ajralib turadi, bu esa uni professional va shaxsiy foydalanish uchun ajoyib tanlovga aylantiradi.
+
+
+
+
+
+
+""", R.drawable.logiotech_c920, "gU4035dDN2s"
+                        ), pc_model(
+                            "Logitech StreamCam", """Asosiy Texnik Xususiyatlar:
+Video Aniqligi: Full HD 1080p (1920 x 1080 piksel) 60fps tezlikda.
+Ovoz: Ikkita ichki stereo mikrofon yuqori sifatli ovoz yozishni ta'minlaydi.
+Avtofokus va Ekspozitsiya: Yuqori aniqlikdagi avtofokus va aqlli ekspozitsiya.
+Obyektiv: Shisha obyektiv, 78° ko'rish burchagi bilan.
+Orientatsiya: Gorizontal yoki vertikal rejimda suratga olish uchun aylantiriluvchi dizayn.
+Ulanish: USB-C port orqali tezkor va ishonchli ulanish.
+Qo'llanilishi:
+Streaming: Twitch va YouTube kabi platformalarda 1080p/60fps sifatda jonli efirlar uchun mos.
+Kontent Yaratuvchilar Uchun: Vertikal video uchun optimallashtirilgan, Instagram va TikTok kabi platformalar uchun juda qulay.
+Video Qo'ng'iroqlar: Microsoft Teams, Zoom, Google Meet kabi platformalarda yuqori sifatli video qo'ng'iroqlar uchun.
+Qo'shimcha Funktsiyalar:
+Logitech Capture Ilovasi: Tasvirni sozlash, kadrga olish va filtrlarni qo'llash imkoniyati.
+Yoritish Moslashuvi: Yorug'lik sharoitlariga mos keladigan aqlli sozlash (RightLight 3 texnologiyasi).
+Tripod Mosligi: Tripodga o'rnatish uchun maxsus ilgak mavjud.
+Narxi:
+O'rtacha narx: ${'$'}150 - ${'$'}170 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+60fps tezlikda silliq video oqimi.
+USB-C ulanishi orqali tez va barqaror signal.
+Kontent yaratish uchun vertikal rejim qo'llab-quvvatlanadi.
+Yoritilgan sharoitlarda avtomatik moslashuv.
+Kamchiliklari:
+4K video qo'llab-quvvatlanmaydi.
+USB-C portga ega bo'lmagan qurilmalar uchun adapter talab qilinishi mumkin.
+Umumiy Baho:
+Logitech StreamCam modeli ayniqsa kontent yaratuvchilar va streamerlar uchun mo'ljallangan. Uning yuqori aniqlikdagi video sifati va moslashuvchan dizayni uni TikTok va Instagram kabi platformalar uchun ideal qiladi. Shuningdek, professional video konferensiyalar uchun ham juda mos keladi.
+
+
+
+
+
+
+""", R.drawable.logitech_stream_cam, "xjZh2wtW5pg"
+                        ), pc_model(
+                            "Logitech BRIO", """Asosiy Texnik Xususiyatlar:
+Video Aniqligi:
+4K Ultra HD (4096 x 2160 piksel)
+Full HD 1080p (1920 x 1080 piksel)
+HD 720p (1280 x 720 piksel)
+Ovoz:
+Ikkita stereo mikrofon yuqori sifatli audio yozish imkonini beradi.
+HDR Qo'llab-quvvatlovi: Yorqinroq ranglar va aniqlik uchun HDR texnologiyasi.
+Ko‘rish Burchagi: Uchta sozlanadigan rejim: 65°, 78°, va 90°.
+Ulanish: USB 3.0 port orqali tezkor va yuqori sifatli ulanish.
+Windows Hello Qo'llab-quvvatlovi: Yuzni tanish orqali xavfsiz kirish imkoniyati.
+Qo'llanilishi:
+Professional Foydalanish: Yuqori sifatli video konferensiyalar, webinarlar va stremlar uchun ideal.
+Ochilish Yozuvlari: Video yozuvlar va kontent yaratish uchun mos.
+Yuzni Tanish: Xavfsizlikni ta'minlash uchun Windows Hello texnologiyasini ishlatadi.
+Qo'shimcha Funktsiyalar:
+Background Replacement: Logi Tune yoki uchinchi tomon dasturlari yordamida fonni o'zgartirish imkoniyati.
+RightLight 3 Texnologiyasi: Har qanday yorug'lik sharoitida aniq video olish uchun avtomatik yorug'lik sozlash.
+Plug-and-Play: Hech qanday murakkab o'rnatishsiz ishlaydi.
+Narxi:
+O'rtacha narx: ${'$'}180 - ${'$'}200 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+4K Video Aniqligi: Yuqori aniqlikdagi tasvir va video sifati.
+Windows Hello: Xavfsiz kirish uchun yuzni aniqlash imkoniyati.
+Professional Ko'rinish: HDR va keng ko'rish burchagi bilan aniq va sifatli tasvir olish.
+Moslashuvchan Foydalanish: Uch xil ko'rish burchagi va keng ko'lamli dasturlar bilan moslashuvchan.
+Kamchiliklari:
+Narxi nisbatan qimmat.
+USB 3.0 port talab qiladi, bu esa eski qurilmalarda muammo bo'lishi mumkin.
+Umumiy Baho:
+Logitech BRIO modeli professional darajadagi video va audio sifati bilan ajralib turadi. U konferensiyalar, striming va xavfsiz kirish uchun ideal tanlovdir. Agar siz yuqori aniqlik va funksionallikka ega web-kamera qidirayotgan bo'lsangiz, Logitech BRIO siz uchun ajoyib variant.
+
+
+
+
+
+
+""", R.drawable.logitech_brio, "v6YzDgcLkzM"
+                        )
+                    )
+                ),
+
+                brand_model(
+                    "Razer", arrayListOf(
+                        pc_model(
+                            "Razer Kiyo",
+                            """Asosiy Texnik Xususiyatlar:
+Video Aniqligi:
+1080p (1920 x 1080 piksel) da 30fps.
+720p (1280 x 720 piksel) da 60fps.
+Mikrofon: Yuqori sifatli ichki mikrofon.
+Halqa Yoritgich: O'rnatilgan LED halqa yoritgich uch darajada sozlanadi (pastdan yuqoriga).
+Obyektiv: Avtofokus bilan yuqori sifatli shisha obyektiv.
+Ulanish: USB 2.0 port orqali ulanish.
+Qo'llanilishi:
+Streaming: Twitch, YouTube kabi platformalarda sifatli strimlar uchun mos.
+Video Qo'ng'iroqlar: Zoom, Microsoft Teams kabi platformalarda aniq va ravshan tasvir.
+Kontent Yaratish: Kameraning o'rnatilgan yoritgichi yorug' sharoitlarni ta'minlaydi, bu esa blog yoki boshqa kontent yaratish uchun qulay.
+Qo'shimcha Funktsiyalar:
+Plug-and-Play: Oson sozlanadi va hech qanday murakkab o'rnatish talab etmaydi.
+Halqa Yoritgich Sozlamasi: Yorug'lik sharoitlari yomon bo'lsa, yoritgich juda qulay.
+Silliq Video: 720p da 60fps strimerlar uchun silliq videolarni ta'minlaydi.
+Narxi:
+O'rtacha narx: ${'$'}80 - ${'$'}100 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+O'rnatilgan Yoritgich: Qo'shimcha yorug'lik kerak bo'lmasligi uchun LED halqa.
+Silliq Video: 60fps tezlikda silliq video oqimi.
+Portativlik: Kichik va engil, har qanday joyga o'rnatish oson.
+Avtofokus: Har qanday masofada aniq tasvir.
+Kamchiliklari:
+4K Qo'llab-quvvatlanmaydi: Faqat 1080p va 720p uchun mo'ljallangan.
+USB 2.0: USB 3.0 ning afzalliklarini taklif qilmaydi.
+Umumiy Baho:
+Razer Kiyo modeli streamerlarga va kontent yaratuvchilarga mo'ljallangan kamera bo'lib, o'rnatilgan yoritgich va yuqori sifatli video bilan ajralib turadi. Bu yuqori sifatli strimlar va video konferensiyalar uchun qulay va arzon narxdagi tanlovdir.
+
+
+
+
+
+
+""",
+                            R.drawable.razer_ki0, "O4yvNVdA-MA",
+                        ), pc_model(
+                            "Razer Kiyo Pro",
+                            """Asosiy Texnik Xususiyatlar:
+Video Aniqligi:
+Full HD 1080p (1920 x 1080 piksel) 60fps tezlikda.
+HDR rejimida 1080p 30fps tezlikda.
+Ovoz:
+Ichki mikrofon yuqori sifatli audio yozishni ta'minlaydi.
+Obyektiv:
+Ultra-hassas shisha obyektiv.
+Dinamik avtofokus funksiyasi.
+Ko‘rish Burchagi:
+Uch darajada sozlanadi: 103°, 90°, va 80°.
+Ulanish:
+USB 3.0 port orqali ulanish.
+Qo'llanilishi:
+Professional Streaming: Twitch, YouTube kabi platformalarda yuqori sifatli jonli efirlar uchun mos.
+Video Qo'ng'iroqlar: Zoom, Google Meet kabi platformalarda aniq va yorqin video.
+Kontent Yaratuvchilar Uchun: HDR rejimi tasvir sifatini oshiradi va qulaylikni ta'minlaydi.
+Qo'shimcha Funktsiyalar:
+HDR Texnologiyasi: Yorqinlik va kontrastni avtomatik ravishda sozlaydi, tasvir sifatini yaxshilaydi.
+Keng Ko‘rish Burchagi: Ko‘rish burchagini vaziyatga moslashtirish imkoniyati.
+Plug-and-Play: Oson va tez sozlanadi.
+Dinamik Avtofokus: Harakatga mos ravishda obyektiv fokusini avtomatik sozlaydi.
+Narxi:
+O'rtacha narx: ${'$'}150 - ${'$'}200 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+HDR Qo'llab-quvvatlovi: Yorug'lik sharoitlariga moslashib, tasvir sifatini yaxshilaydi.
+Keng Ko'rish Burchagi: Guruh qo'ng'iroqlari yoki kengroq kadrlar uchun ideal.
+Avtofokus Texnologiyasi: Harakatga mos ravishda fokusni avtomatik sozlash.
+USB 3.0 Ulash: Tez va barqaror ulanish imkonini beradi.
+Kamchiliklari:
+4K Video Aniqligi Yo'q: Faqat 1080p qo'llab-quvvatlanadi.
+Narxi Qimmatroq: Oddiy foydalanuvchilar uchun qimmat variant bo'lishi mumkin.
+Umumiy Baho:
+Razer Kiyo Pro modeli strimerlar va kontent yaratuvchilar uchun yuqori sifatli web-kamera bo'lib, uning HDR rejimi va keng ko‘rish burchagi uni professional foydalanish uchun juda mos qiladi. Agar siz yuqori aniqlikdagi video oqimi va yuqori darajadagi funksionallikni talab qilsangiz, bu kamera ideal tanlovdir.
+""",
+                            R.drawable.razer_pro,
+                            "wJ3yUkBpgW0",
+                        )
+                    )
+                ),
+
+                brand_model(
+                    "Microsoft", arrayListOf(
+                        pc_model(
+                            "Microsoft LifeCam HD-3000",
+                            """Asosiy Texnik Xususiyatlar:
+Video Aniqligi:
+720p HD video (1280 x 720 piksel) 30fps tezlikda.
+Ovoz:
+Ikkita ichki mikrofon yuqori sifatli ovoz yozishni ta'minlaydi.
+Obyektiv:
+Avtofokus texnologiyasi bilan aniq tasvirlar.
+Ulanish:
+USB 2.0 port orqali ulanish.
+Ko‘rish Burchagi:
+68.5° keng ko'rish burchagi.
+Qo'llanilishi:
+Video Qo'ng'iroqlar: Zoom, Microsoft Teams, Skype kabi platformalarda aniq va silliq video qo'ng'iroqlar.
+Streaming: Twitch yoki YouTube kabi platformalarda oddiy darajada striming qilish uchun mos.
+Kontent Yaratuvchilar: Asosiy video yozuvlar va oddiy kontent yaratish uchun juda qulay.
+Qo'shimcha Funktsiyalar:
+TrueColor Texnologiyasi: Yoritish sharoitlariga mos ravishda ranglarni avtomatik ravishda sozlash.
+Plug-and-Play: Oson o'rnatish va sozlash, hech qanday dasturiy ta'minot talab qilinmaydi.
+Avtofokus: Harakatda bo'lgan tasvirlarni aniq ushlab turish uchun avtofokus imkoniyati.
+Narxi:
+O'rtacha narx: ${'$'}40 - ${'$'}60 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+Arzon Narx: Yuqori sifatli video va audio uchun juda arzon.
+HD Video: 720p HD sifatida aniq va toza tasvirlar.
+Yorug'likni Moslashtirish: TrueColor texnologiyasi yordamida yorug'lik sharoitlariga moslashish.
+Yengil va Portativ: Oson olib yurish va har qanday kompyuterga o'rnatish.
+Kamchiliklari:
+Faqat 720p: 1080p yoki 4K videolarni qo'llab-quvvatlamaydi.
+USB 2.0: USB 3.0 ning tezkor ulanish imkoniyatlari yo'q.
+Umumiy Baho:
+Microsoft LifeCam HD-3000 modeli arzon narxdagi yuqori sifatli web-kamera bo'lib, oddiy video qo'ng'iroqlar va striminglar uchun ideal tanlovdir. Agar siz yuqori sifatli video qo'ng'iroqlarni yoki oddiy strimlarni boshlashni istasangiz, bu kamera siz uchun yaxshi variant bo'lishi mumkin.
+
+
+
+
+
+
+""", R.drawable.windows_lifecam,
+                            "bxyqLY6b_-c"
+                        ), pc_model(
+                            "Microsoft LifeCam Studio",
+                            """Asosiy Texnik Xususiyatlar:
+Video Aniqligi:
+1080p Full HD video (1920 x 1080 piksel) 30fps tezlikda.
+Ovoz:
+Ichki mikrofon, ovozli aniqlikni ta'minlaydi.
+Obyektiv:
+360° aylanishga imkon beruvchi sozlanadigan shisha obyektiv.
+Avtofokus texnologiyasi bilan aniq va aniqlangan tasvirlar.
+Ulanish:
+USB 2.0 port orqali ulanish.
+Ko‘rish Burchagi:
+75° keng ko'rish burchagi.
+Qo'llanilishi:
+Video Qo'ng'iroqlar: Skype, Zoom kabi platformalarda yuqori sifatli video qo'ng'iroqlar uchun ideal.
+Streaming: Yaxshi video sifatini ta'minlaydi, shuningdek, YouTube yoki Twitch platformalarida oson striming qilish mumkin.
+Kontent Yaratuvchilar: Yaxshi tasvir va ovoz sifati bilan videolar yaratish va o'z kontentlarini ishlab chiqish uchun qulay.
+Qo'shimcha Funktsiyalar:
+TrueColor Texnologiyasi: Yorug'lik sharoitlariga mos ravishda ranglarni avtomatik ravishda sozlash va to'g'ri tasvir olish imkonini beradi.
+360° Aylanish: Kamerani har qanday yo'nalishga o'zgartirish imkoniyati.
+Avtofokus: Harakatda bo'lgan tasvirlarni aniq va aniq ushlab turish uchun avtofokus.
+Plug-and-Play: O'rnatish va ishlatish juda oson, hech qanday murakkab dasturiy ta'minot talab qilinmaydi.
+Narxi:
+O'rtacha narx: ${'$'}80 - ${'$'}100 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+Full HD Video: Yuqori sifatli 1080p video va aniq tasvirlar.
+Keng Ko'rish Burchagi: Keng burchakdagi tasvirni ta'minlash, guruh qo'ng'iroqlari uchun juda qulay.
+360° Aylanish: Kamerani istalgan yo'nalishga sozlash imkoniyati.
+TrueColor Texnologiyasi: Yorug'lik sharoitlariga moslashish, har qanday muhitda sifatli tasvir olish.
+Kamchiliklari:
+USB 2.0: USB 3.0 ning tezkor ulanish imkoniyatlari yo'q.
+Avtofokusning ba'zi cheklovlari: Ba'zida tez va aniqlikda fokuslashda kichik muammolar bo'lishi mumkin.
+Umumiy Baho:
+Microsoft LifeCam Studio modeli yuqori sifatli video va ovoz uchun ajoyib tanlovdir. Ushbu kamera asosan video qo'ng'iroqlar va kontent yaratish uchun mo'ljallangan, 360° aylanish, TrueColor texnologiyasi va yuqori sifatli 1080p video bilan ajralib turadi. Agar siz sifatli video qo'ng'iroqlarni yoki strimlarni qilishni istasangiz, bu kamera juda yaxshi variant bo'lishi mumkin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+""", R.drawable.mifrosoft_lifecam,
+                            "XQtq2fPMSek"
+                        ), pc_model("Microsoft Modern Webcam" ,
+                            """Asosiy Texnik Xususiyatlar:
+Video Aniqligi:
+1080p Full HD video (1920 x 1080 piksel) 30fps tezlikda.
+Ovoz:
+Ichki mikrofon, yuqori sifatli ovoz yozishni ta'minlaydi.
+Obyektiv:
+78° keng ko'rish burchagi.
+Yaxshi aniqlik va sifatni ta'minlovchi obyektiv.
+Ulanish:
+USB 2.0 port orqali ulanish.
+Yoritish:
+Autolight, yorug'lik sharoitlariga moslashadi.
+Qo'llanilishi:
+Video Qo'ng'iroqlar: Skype, Zoom, Microsoft Teams kabi platformalarda aniq va ravshan video qo'ng'iroqlar.
+Streaming: Oddiy darajadagi striminglar uchun mos, YouTube yoki Twitch platformalarida.
+Kontent Yaratuvchilar: Oson video yozuvlar va kontent yaratish uchun mos.
+Qo'shimcha Funktsiyalar:
+Autolight: Kamera avtomatik ravishda yoritish sharoitlariga moslashadi, bu esa har qanday muhitda aniq tasvir olishni ta'minlaydi.
+Plug-and-Play: O'rnatish va ishlatish juda oson, dasturiy ta'minot talab qilinmaydi.
+Avtofokus: Harakatda bo'lgan tasvirlarni aniq ushlab turish uchun avtofokus.
+Narxi:
+O'rtacha narx: ${'$'}50 - ${'$'}70 (do'konlar va hududga qarab o'zgarishi mumkin).
+Afzalliklari:
+Full HD Video: 1080p video sifatida aniq va toza tasvirlar.
+Autolight Texnologiyasi: Yorug'lik sharoitlariga avtomatik moslashish.
+Plug-and-Play: Tez va oson o'rnatish, hech qanday murakkab dasturiy ta'minot talab etilmaydi.
+Keng Ko'rish Burchagi: 78° keng ko'rish burchagi, ko'plab odamlar uchun mos.
+Kamchiliklari:
+USB 2.0: USB 3.0 ning tezkor ulanish imkoniyatlari yo'q.
+Yuqori Fps Qo'llab-quvvatlanmaydi: 30fps maksimal tezlikda video oqimi mavjud.
+Umumiy Baho:
+Microsoft Modern Webcam odatiy video qo'ng'iroqlar va kontent yaratish uchun ajoyib tanlovdir. 1080p video sifatida aniq tasvirlar, avtomatik yorug'lik moslashuvi va o'rnatishning soddaligi uni yaxshi variantga aylantiradi. Agar siz o'rta darajadagi kamera izlayotgan bo'lsangiz, bu model siz uchun qulay bo'lishi mumkin.
+
+
+
+
+
+
+
+""",
+                            R.drawable.microsoft_pro,
+                            "vQkagXK9L58"
+                        )
+                    )
+                )
+            )
+        )
+
 //         monitors, mice, keyboards, printers, and scanners,
         var baza2 = arrayListOf(
 
@@ -1928,13 +3030,14 @@ Canon CanoScan LiDE 400 yuqori sifatli, kompaktdir va uyda yoki kichik ofisda fo
             keyboardModels,
             printerModels,
             scannerModels,
-
-
+            projectionModels,
+            speakersModels,
+            webcamModels,
             )
 
 
         if (data == "1") {
-            var adapter = PcPartsAdapter(baza2, object : PcPartsAdapter.ItemSelectListener {
+            var adapter = PcPartsAdapter(this, baza2, object : PcPartsAdapter.ItemSelectListener {
                 override fun onClick(date: main_model) {
                     var intent = Intent(this@SelectActivity, BrandActivity::class.java)
                     intent.putExtra("data2", date)
@@ -1947,20 +3050,24 @@ Canon CanoScan LiDE 400 yuqori sifatli, kompaktdir va uyda yoki kichik ofisda fo
 
             binding.recycler.adapter = adapter
 
+            val animation =
+                AnimationUtils.loadLayoutAnimation(this, R.anim.layout_animation_fall_down)
+            binding.recycler.layoutAnimation = animation
         }
         if (data == "2") {
-            var adapter = PcPartsAdapter(baza, object : PcPartsAdapter.ItemSelectListener {
+            var adapter = PcPartsAdapter(this, baza, object : PcPartsAdapter.ItemSelectListener {
                 override fun onClick(date: main_model) {
                     var intent = Intent(this@SelectActivity, BrandActivity::class.java)
                     intent.putExtra("data2", date)
                     intent.putExtra("title2", date.hardware_name)
                     startActivity(intent)
-
-
                 }
             })
             binding.recycler.adapter = adapter
 
+            val animation =
+                AnimationUtils.loadLayoutAnimation(this, R.anim.layout_animation_fall_down)
+            binding.recycler.layoutAnimation = animation
         }
 
     }

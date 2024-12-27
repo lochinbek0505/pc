@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.cvQuections.setOnClickListener{
+
+            startActivity(Intent(this@MainActivity,QuectionsActivity::class.java))
+
+
+        }
 //        binding.cvTashqi.setOnClickListener {
 //
 //            var intent = Intent(this, SelectActivity::class.java)

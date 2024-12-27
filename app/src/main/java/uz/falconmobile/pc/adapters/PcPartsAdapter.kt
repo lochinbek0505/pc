@@ -1,13 +1,17 @@
 package uz.falconmobile.pc.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
+import uz.falconmobile.pc.R
 import uz.falconmobile.pc.databinding.ItemLayoutBinding
 import uz.falconmobile.pc.models.brand_model
 import uz.falconmobile.pc.models.main_model
 
 class PcPartsAdapter(
+    var  context: Context,
     private val items: List<main_model>,
     val listener: ItemSelectListener
 ) : RecyclerView.Adapter<PcPartsAdapter.PcPartViewHolder>() {

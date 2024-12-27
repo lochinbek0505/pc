@@ -2,13 +2,13 @@ package uz.falconmobile.pc.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import uz.falconmobile.pc.R
 import uz.falconmobile.pc.adapters.BrandPartsAdapter
 import uz.falconmobile.pc.databinding.ActivityBrandBinding
 import uz.falconmobile.pc.models.brand_model
 import uz.falconmobile.pc.models.main_model
-import uz.falconmobile.pc.models.pc_model
-import uz.falconmobile.pc.models.tansfer_model
 
 class BrandActivity : AppCompatActivity() {
 
@@ -25,7 +25,8 @@ class BrandActivity : AppCompatActivity() {
 
         var data = intent.getSerializableExtra("data2") as main_model
 
-        var adapter = BrandPartsAdapter(data.brand_list, object : BrandPartsAdapter.ItemSelectListener {
+        var adapter =
+            BrandPartsAdapter(this, data.brand_list, object : BrandPartsAdapter.ItemSelectListener {
             override fun onClick(date: brand_model) {
 
 
@@ -43,7 +44,8 @@ class BrandActivity : AppCompatActivity() {
         })
 
         binding.recycler.adapter = adapter
-
+        val animation = AnimationUtils.loadLayoutAnimation(this , R.anim.layout_animation_fall_down)
+        binding.recycler.layoutAnimation=animation
 
 
     }

@@ -2,6 +2,7 @@ package uz.falconmobile.pc.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,7 +32,7 @@ class ModelActivity : AppCompatActivity() {
         var data = intent.getSerializableExtra("data3") as brand_model
 
         var adapter =
-            ModelPartsAdapter(data.model_list, object : ModelPartsAdapter.ItemSelectListener {
+            ModelPartsAdapter(this,data.model_list, object : ModelPartsAdapter.ItemSelectListener {
                 override fun onClick(date: pc_model) {
 
                     var intent = Intent(this@ModelActivity, ShowActivity::class.java)
@@ -46,6 +47,8 @@ class ModelActivity : AppCompatActivity() {
 
         binding.recycler.adapter = adapter
 
+        val animation = AnimationUtils.loadLayoutAnimation(this , R.anim.layout_animation_fall_down)
+        binding.recycler.layoutAnimation=animation
 
     }
 }

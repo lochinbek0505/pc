@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/resultTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Test tugallandi !"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+        android:textColor="@color/black"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/resultMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sizning to'g'ri javoblaringiz : "
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chiqish"
+        android:textSize="18sp"
+        android:backgroundTint="@color/primary"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+
+</LinearLayout>

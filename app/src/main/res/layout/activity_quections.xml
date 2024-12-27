@@ -1,10 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.QuectionsActivity">
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/quizTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Savollari !"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <!-- Title -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginStart="16dp"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:max="100"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/20"
+        android:textColor="#1976D2"
+        android:layout_alignParentEnd="true"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+
+        />
+</RelativeLayout>
+
+    <!-- Question Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="What is the capital of France?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Answer Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cornerRadius="15dp"
+                    android:layout_margin="15dp"
+                    android:layout_centerInParent="true"
+                    android:text="C) Madrid"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:cornerRadius="15dp"
+            android:layout_margin="15dp"
+            android:layout_centerInParent="true"
+            android:text="C) Madrid"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/answer3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:cornerRadius="15dp"
+            android:layout_margin="15dp"
+            android:layout_centerInParent="true"
+            android:text="C) Madrid"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
